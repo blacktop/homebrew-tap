@@ -1,9 +1,9 @@
 class Graboid < Formula
   desc "Clientless docker image downloader."
   homepage "https://github.com/blacktop/graboid"
-  url "https://github.com/blacktop/graboid/releases/download/0.8.0/graboid_0.8.0_macOS_amd64.tar.gz"
-  version "0.8.0"
-  sha256 "ebe02d789ddb32005917ae707e405345404aefcc8c27a831d7c965784f2eec25"
+  url "https://github.com/blacktop/graboid/releases/download/0.9.0/graboid_0.9.0_macOS_amd64.tar.gz"
+  version "0.9.0"
+  sha256 "74a4644800477990dfe24beaf871ab8cac865f0d4f7f864bef882ab139db26fa"
 
   def install
     bin.install "graboid"
