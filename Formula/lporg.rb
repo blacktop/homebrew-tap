@@ -1,9 +1,9 @@
 class Lporg < Formula
   desc "Organize Your macOS Launchpad Apps."
   homepage "https://github.com/blacktop/lporg"
-  url "https://github.com/blacktop/lporg/releases/download/17.12.5/lporg_17.12.5_macOS_amd64.tar.gz"
-  version "17.12.5"
-  sha256 "f96b143db2da0b4118670a00b2dd056e5cd1d734ae1660db1ea3fcd286708a14"
+  url "https://github.com/blacktop/lporg/releases/download/17.12.6/lporg_17.12.6_macOS_amd64.tar.gz"
+  version "17.12.6"
+  sha256 "d00d227d24cf9fa952711935ef28137a3aa5e8bafa95d206bbd05ba8135b2853"
 
   def install
     bin.install "lporg"
