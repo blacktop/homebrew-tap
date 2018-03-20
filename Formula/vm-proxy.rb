@@ -1,9 +1,9 @@
 class VmProxy < Formula
   desc "VM Proxy Server - Allows hypervisors to be controlled from docker containers."
   homepage "https://github.com/blacktop/vm-proxy"
-  url "https://github.com/blacktop/vm-proxy/releases/download/18.03.2-dev/vm-proxy_18.03.2-dev_macOS_amd64.tar.gz"
-  version "18.03.2-dev"
-  sha256 "cc87b0bd571333af9217361982202820c40f1c89bfc568d5802db71c7459f7c8"
+  url "https://github.com/blacktop/vm-proxy/releases/download/18.03.3-dev/vm-proxy_18.03.3-dev_macOS_amd64.tar.gz"
+  version "18.03.3-dev"
+  sha256 "315475aebc97544f6e2e41a7ce8838dfc59c92362cffcf5368aa7de461589620"
 
   def install
     bin.install "vm-proxy"
