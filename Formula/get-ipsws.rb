@@ -1,9 +1,9 @@
 class GetIpsws < Formula
   desc "Download ipsw(s) from ipsw.me or theiphonewiki.com"
   homepage "https://github.com/blacktop/get-ipsws"
-  url "https://github.com/blacktop/get-ipsws/releases/download/v18.09.3/get-ipsws_18.09.3_macOS_amd64.tar.gz"
-  version "18.09.3"
-  sha256 "e3c919c60ba69dc2e5f6ac87d8dd7103cc64ea1fd7af79e0e28720ac951b039b"
+  url "https://github.com/blacktop/get-ipsws/releases/download/v18.09.5/get-ipsws_18.09.5_macOS_amd64.tar.gz"
+  version "18.09.5"
+  sha256 "1bb1ffe0efbfcb11d20dda9c2052e5afd96c5476a292359037a166b0943c7acf"
 
   def install
     bin.install "get-ipsws"
