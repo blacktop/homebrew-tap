@@ -1,9 +1,9 @@
 class Ipsw < Formula
   desc "Download ipsw(s) from ipsw.me or theiphonewiki.com"
   homepage "https://github.com/blacktop/ipsw"
-  url "https://github.com/blacktop/ipsw/releases/download/v18.10.1/ipsw_18.10.1_macOS_amd64.tar.gz"
-  version "18.10.1"
-  sha256 "4c33f2d6a5d69641df7d50b11120ac671019e06f50cf4335a08d61de27f47e6c"
+  url "https://github.com/blacktop/ipsw/releases/download/v18.10.2/ipsw_18.10.2_macOS_amd64.tar.gz"
+  version "18.10.2"
+  sha256 "c10ad88e35d265e0190583fc93bbd531c88d5dd155a36b516c69a214286dcad7"
 
   def install
     bin.install "ipsw"
