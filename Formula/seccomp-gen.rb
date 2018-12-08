@@ -1,9 +1,9 @@
 class SeccompGen < Formula
   desc "Docker Secure Computing Profile Generator."
   homepage "https://github.com/blacktop/seccomp-gen"
-  url "https://github.com/blacktop/seccomp-gen/releases/download/v1.0.2/seccomp-gen_1.0.2_macOS_amd64.tar.gz"
-  version "1.0.2"
-  sha256 "6d16a0f7ccd12f81dfc5ab6dd77720f0f1d48e738feec6ca872a9ee3c5e4133b"
+  url "https://github.com/blacktop/seccomp-gen/releases/download/v1.1.4/seccomp-gen_1.1.4_macOS_amd64.tar.gz"
+  version "1.1.4"
+  sha256 "c12f07321dcb1059b459176d6a07f0c33b022e9124f9a85925f5f19f777142f7"
 
   def install
     bin.install "scgen"
