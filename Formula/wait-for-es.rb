@@ -2,9 +2,9 @@
 class WaitForEs < Formula
   desc "Wait until Elasticsearch become available"
   homepage "https://github.com/blacktop/wait-for-es"
-  url "https://github.com/blacktop/wait-for-es/releases/download/v0.1.2/wait-for-es_0.1.2_MacOS_64-bit.tar.gz"
-  version "0.1.2"
-  sha256 "c68f7f4785debe7e53efac6197ede529f95b1199e65f2a8a05233109fef1365d"
+  url "https://github.com/blacktop/wait-for-es/releases/download/v0.1.3/wait-for-es_0.1.3_MacOS_64-bit.tar.gz"
+  version "0.1.3"
+  sha256 "e091a2bfb06ae59a44c88aeeedf34c756e3984d50496a545ff46ccad4216e7f7"
 
   def install
     bin.install "wait-for-es"
