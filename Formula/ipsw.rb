@@ -15,7 +15,6 @@ class Ipsw < Formula
 
   def install
     bin.install "ipsw"
-    bin.install "ipsw"
   end
 
   test do
