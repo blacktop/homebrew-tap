@@ -2,12 +2,12 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "19.08.80"
+  version "19.08.81"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/blacktop/ipsw/releases/download/v19.08.80/ipsw_19.08.80_macOS_amd64_extras.tar.gz"
-    sha256 "2dd4b05ae1d4f2d0fbdfb46630ba8c3345ea1c6b055fcb00a2b3dfea3fa579d3"
+    url "https://github.com/blacktop/ipsw/releases/download/v19.08.81/ipsw_19.08.81_macOS_amd64_extras.tar.gz"
+    sha256 "8d245816c249a245f631e278e172b38abc95614d27f4e96f4a1cba526c39ce52"
   elsif OS.linux?
   end
   
