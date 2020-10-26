@@ -5,6 +5,13 @@ class FridaTools < Formula
   homepage "https://www.frida.re/"
   url "https://files.pythonhosted.org/packages/f2/24/87d420b7712aac97540ca8e287a06297aaf2190b3357fee3dcee381e6140/frida-tools-9.0.0.tar.gz"
   sha256 "33b9035078305e70e1dad625dacef64b553f2a0ba285a754328e2417db5d8b98"
+  license "MIT"
+  revision 1
+  
+  livecheck do
+    url :stable
+    regex(%r{href=.*?/packages.*?/frida[._-]v?(\d+(?:\.\d+)*(?:[a-z]\d+)?)\.t}i)
+  end
 
   depends_on "python@3.9"
 
