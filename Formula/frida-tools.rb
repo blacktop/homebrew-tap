@@ -6,7 +6,7 @@ class FridaTools < Formula
   url "https://files.pythonhosted.org/packages/f2/24/87d420b7712aac97540ca8e287a06297aaf2190b3357fee3dcee381e6140/frida-tools-9.0.0.tar.gz"
   sha256 "33b9035078305e70e1dad625dacef64b553f2a0ba285a754328e2417db5d8b98"
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
 
   resource "colorama" do
     url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
