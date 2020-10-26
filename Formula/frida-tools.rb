@@ -3,10 +3,10 @@ class FridaTools < Formula
 
   desc "CLI tools for Frida"
   homepage "https://www.frida.re/"
-  url "https://github.com/frida/frida-tools/archive/9.0.0.tar.gz"
-  sha256 "1709e6f3f587e872e1936b1e999d50a039a6e483887248c68ed67dbff6b62187"
+  url "https://files.pythonhosted.org/packages/f2/24/87d420b7712aac97540ca8e287a06297aaf2190b3357fee3dcee381e6140/frida-tools-9.0.0.tar.gz"
+  sha256 "33b9035078305e70e1dad625dacef64b553f2a0ba285a754328e2417db5d8b98"
 
-  depends_on "python@3.9"
+  depends_on "python@3.8"
 
   resource "colorama" do
     url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
