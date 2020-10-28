@@ -6,7 +6,7 @@ class FridaTools < Formula
   url "https://files.pythonhosted.org/packages/f2/24/87d420b7712aac97540ca8e287a06297aaf2190b3357fee3dcee381e6140/frida-tools-9.0.0.tar.gz"
   sha256 "33b9035078305e70e1dad625dacef64b553f2a0ba285a754328e2417db5d8b98"
   license "MIT"
-  revision 1
+  revision 2
   
   livecheck do
     url :stable
@@ -21,8 +21,8 @@ class FridaTools < Formula
   end
 
   resource "frida" do
-    url "https://files.pythonhosted.org/packages/e2/b9/25a2e734a04916dccd27643f5c92868b35f45397c47d51d804a3e852c9c9/frida-14.0.1.tar.gz"
-    sha256 "0830f966325334d590d4b37842d8f0816d0996aa47a2c7cc60c2aeb008271ee5"
+    url "https://files.pythonhosted.org/packages/7c/2a/cac24fc383764ff95ff0cbaaa97ab30934648db469cf9e9ed04b0fc40620/frida-14.0.5.tar.gz"
+    sha256 "38e62660788316a8dcd83e3ddd4996c47d271c2689158d35e7b35446a6a1e964"
   end
 
   resource "prompt_toolkit" do
