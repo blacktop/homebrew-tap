@@ -5,24 +5,24 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "20.08.90"
+  version "20.08.91"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/blacktop/ipsw/releases/download/v20.08.90/ipsw_20.08.90_macOS_x86_64.tar.gz"
-    sha256 "d8d7488ca543ec82bce4460362696a672469f0aa6d8a181b5f2ed02b9b7aa286"
+    url "https://github.com/blacktop/ipsw/releases/download/v20.08.91/ipsw_20.08.91_macOS_x86_64.tar.gz"
+    sha256 "a6efcf32f5fa81c814f36bdb7781ad3d063462eeccee3c5e18ed462afe95db77"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/blacktop/ipsw/releases/download/v20.08.90/ipsw_20.08.90_macOS_arm64.tar.gz"
-    sha256 "633435313e30da66124cd73e6ba4a6cda9e286aaa86b5f92accd7efdf8944406"
+    url "https://github.com/blacktop/ipsw/releases/download/v20.08.91/ipsw_20.08.91_macOS_arm64.tar.gz"
+    sha256 "e7ccf22119783fa87262159b4eb741fe345ea2b65391dca27b21855546a92d1e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/blacktop/ipsw/releases/download/v20.08.90/ipsw_20.08.90_linux_x86_64.tar.gz"
-    sha256 "a7c2a5faec4fc15baf86fddcfe5d826cdb948b28bd2bec9d5d6f9240dae4f861"
+    url "https://github.com/blacktop/ipsw/releases/download/v20.08.91/ipsw_20.08.91_linux_x86_64.tar.gz"
+    sha256 "b2edf3af3e5fff6aff0bfcbce3e81839f4e7f47681a16895b71429f08e82d5ba"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/blacktop/ipsw/releases/download/v20.08.90/ipsw_20.08.90_linux_arm64.tar.gz"
-    sha256 "c37fcceafdfed25cf359c96d14dfd5456ee3e86e5a9f25703a6e8c8a72f67c2c"
+    url "https://github.com/blacktop/ipsw/releases/download/v20.08.91/ipsw_20.08.91_linux_arm64.tar.gz"
+    sha256 "47ff9d334b122343b962c6b08fe10ef2c57d69bd7840390f3fb336f504af0ded"
   end
 
   depends_on "bat"
