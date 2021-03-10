@@ -3,11 +3,11 @@ class FridaTools < Formula
 
   desc "CLI tools for Frida"
   homepage "https://www.frida.re/"
-  url "https://files.pythonhosted.org/packages/f2/24/87d420b7712aac97540ca8e287a06297aaf2190b3357fee3dcee381e6140/frida-tools-9.0.0.tar.gz"
-  sha256 "33b9035078305e70e1dad625dacef64b553f2a0ba285a754328e2417db5d8b98"
+  url "https://files.pythonhosted.org/packages/d6/cd/6086bd6fc3a32a3258b00e43348954a4c1078353f7538e9cb6217d48fcc2/frida-tools-9.2.2.tar.gz"
+  sha256 "91279e82024ca70a5e1bfebb28e12e2f1873d73654aeba81dbd0998cf05d86e8"
   license "MIT"
-  revision 2
-  
+  revision 3
+
   livecheck do
     url :stable
     regex(%r{href=.*?/packages.*?/frida[._-]v?(\d+(?:\.\d+)*(?:[a-z]\d+)?)\.t}i)
@@ -21,18 +21,18 @@ class FridaTools < Formula
   end
 
   resource "frida" do
-    url "https://files.pythonhosted.org/packages/7c/2a/cac24fc383764ff95ff0cbaaa97ab30934648db469cf9e9ed04b0fc40620/frida-14.0.5.tar.gz"
-    sha256 "38e62660788316a8dcd83e3ddd4996c47d271c2689158d35e7b35446a6a1e964"
+    url "https://files.pythonhosted.org/packages/03/8c/552d393fb1eb91f4c14482efcd04c89f35bb6d96f807c12c20ab837e15b2/frida-14.2.13.tar.gz"
+    sha256 "bfeb68ab7b2717bf94e56e2ba025557e82c371878a1b2e1ac52d0a6342985d18"
   end
 
   resource "prompt_toolkit" do
-    url "https://files.pythonhosted.org/packages/d4/12/7fe77b49d67845a378cfadb484b64218ed09d0e8bf420c663b4fe28f0631/prompt_toolkit-3.0.8.tar.gz"
-    sha256 "25c95d2ac813909f813c93fde734b6e44406d1477a9faef7c915ff37d39c0a8c"
+    url "https://files.pythonhosted.org/packages/b1/32/2a6b734dc25b249467bfc1d844b077a252ea393d1b90733f4e899aa56506/prompt_toolkit-3.0.16.tar.gz"
+    sha256 "0fa02fa80363844a4ab4b8d6891f62dd0645ba672723130423ca4037b80c1974"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/5d/0e/ff13c055b014d634ed17e9e9345a312c28ec6a06448ba6d6ccfa77c3b5e8/Pygments-2.7.2.tar.gz"
-    sha256 "381985fcc551eb9d37c52088a32914e00517e57f4a21609f48141ba08e193fa0"
+    url "https://files.pythonhosted.org/packages/15/9d/bc9047ca1eee944cc245f3649feea6eecde3f38011ee9b8a6a64fb7088cd/Pygments-2.8.1.tar.gz"
+    sha256 "2656e1a6edcdabf4275f9a3640db59fd5de107d88e8663c5d4e9a0fa62f77f94"
   end
 
   resource "six" do
