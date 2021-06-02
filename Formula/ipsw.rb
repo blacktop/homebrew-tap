@@ -5,24 +5,29 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.0.31"
+  version "3.0.33"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/blacktop/ipsw/releases/download/v3.0.31/ipsw_3.0.31_macOS_x86_64.tar.gz"
-    sha256 "2f05903ccd3724964c0585b908e8cfe94955babab9d7b19bfdaf5de68151e9ad"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.33/ipsw_3.0.33_macOS_x86_64.tar.gz"
+      sha256 "98e7797b5c7d490d2e26a87d1a84542f476fa6b276e76aebb658f86a206134ba"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.33/ipsw_3.0.33_macOS_arm64.tar.gz"
+      sha256 "9807aa9c569968af0165e4b1d13a19422210f66ff7f20a7539268119eeb59377"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/blacktop/ipsw/releases/download/v3.0.31/ipsw_3.0.31_macOS_arm64.tar.gz"
-    sha256 "47ffca2219c4e76b7aa8301e4760f1bc63646cdf1c1e0072a2e218190b4359d8"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/blacktop/ipsw/releases/download/v3.0.31/ipsw_3.0.31_linux_x86_64.tar.gz"
-    sha256 "73d3f5dc9528d194ab122d5718822802ab8994a5a507023d87b956bfee6c6d43"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/blacktop/ipsw/releases/download/v3.0.31/ipsw_3.0.31_linux_arm64.tar.gz"
-    sha256 "e65f71543e3cd5a92079b3b163d27091af7bdc3e26c2f247be023cc2b694c115"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.33/ipsw_3.0.33_linux_x86_64.tar.gz"
+      sha256 "39534d096dceafd3e19ba2d8bee36663dccf23ae9f77f687e60a16e711bf22a6"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.33/ipsw_3.0.33_linux_arm64.tar.gz"
+      sha256 "1d13a2b1e7174ed9a5ca4b75f324a7651bd3446df2357c31b638d4c4dd8807fa"
+    end
   end
 
   depends_on "bat"
