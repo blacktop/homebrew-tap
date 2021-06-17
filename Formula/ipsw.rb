@@ -5,28 +5,28 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.0.41"
+  version "3.0.42"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.41/ipsw_3.0.41_macOS_x86_64.tar.gz"
-      sha256 "b587c5d1b310e4a13faaa284a2a4fc8390faef9f8699b8415a96a48ca4039dec"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.42/ipsw_3.0.42_macOS_x86_64.tar.gz"
+      sha256 "96ab4bf20fa46283ab0a63e201597d0d1c676210809e90dfd7d51b85d129898d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.41/ipsw_3.0.41_macOS_arm64.tar.gz"
-      sha256 "56a42665ae58c7f05a809384139c10ea71dd3a0b4fc2849ac26937ce93688238"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.42/ipsw_3.0.42_macOS_arm64.tar.gz"
+      sha256 "777507d8aa15229e7e57f0fc736b3717849a67f5708256180117c8a72fe63344"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.41/ipsw_3.0.41_linux_x86_64.tar.gz"
-      sha256 "a24a9d4afef2f3a70ae9f9d7d1fcd902187a9bfeb3dd18ac521f145752fc65e7"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.42/ipsw_3.0.42_linux_x86_64.tar.gz"
+      sha256 "30bf9b90fa88712f80c0f9af3cd422be0f0495e5a3d854e6df37cbfe8f4bea14"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.41/ipsw_3.0.41_linux_arm64.tar.gz"
-      sha256 "b5b573547d1978427e1f0409e67ab3b74c7bd54a38f0ea90592754b1c40d7283"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.42/ipsw_3.0.42_linux_arm64.tar.gz"
+      sha256 "88c3fe4a15eff6916ef581958b6b0ac572f84718b88f2f996f2dd8a0b020aba1"
     end
   end
 
