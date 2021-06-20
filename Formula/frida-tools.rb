@@ -3,8 +3,8 @@ class FridaTools < Formula
 
   desc "CLI tools for Frida"
   homepage "https://www.frida.re/"
-  url "https://files.pythonhosted.org/packages/d6/cd/6086bd6fc3a32a3258b00e43348954a4c1078353f7538e9cb6217d48fcc2/frida-tools-9.2.2.tar.gz"
-  sha256 "91279e82024ca70a5e1bfebb28e12e2f1873d73654aeba81dbd0998cf05d86e8"
+  url "https://files.pythonhosted.org/packages/d8/c0/4d00f9e85b499bed8857971040e9a5b9e6f1a995fb3569d25984eaf5294c/frida-tools-9.2.5.tar.gz"
+  sha256 "354736266f9da2586d4a1a9327886de896ed97a59087c373225999f7e1ceb372"
   license "MIT"
   revision 3
 
@@ -21,23 +21,23 @@ class FridaTools < Formula
   end
 
   resource "frida" do
-    url "https://files.pythonhosted.org/packages/03/8c/552d393fb1eb91f4c14482efcd04c89f35bb6d96f807c12c20ab837e15b2/frida-14.2.13.tar.gz"
-    sha256 "bfeb68ab7b2717bf94e56e2ba025557e82c371878a1b2e1ac52d0a6342985d18"
+    url "https://files.pythonhosted.org/packages/a4/9b/47060185e90b7641dd9776a8577b9b048ae5ebce62db91e757ba91455aff/frida-14.2.18.tar.gz"
+    sha256 "f0e40b8b2efec32a540c259b923ee65a73a6085c1f30d139adf01c859abaf47a"
   end
 
   resource "prompt_toolkit" do
-    url "https://files.pythonhosted.org/packages/b1/32/2a6b734dc25b249467bfc1d844b077a252ea393d1b90733f4e899aa56506/prompt_toolkit-3.0.16.tar.gz"
-    sha256 "0fa02fa80363844a4ab4b8d6891f62dd0645ba672723130423ca4037b80c1974"
+    url "https://files.pythonhosted.org/packages/88/4b/2c0f9e2b52297bdeede91c8917c51575b125006da5d0485521fa2b1e0b75/prompt_toolkit-3.0.19.tar.gz"
+    sha256 "08360ee3a3148bdb5163621709ee322ec34fc4375099afa4bbf751e9b7b7fa4f"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/15/9d/bc9047ca1eee944cc245f3649feea6eecde3f38011ee9b8a6a64fb7088cd/Pygments-2.8.1.tar.gz"
-    sha256 "2656e1a6edcdabf4275f9a3640db59fd5de107d88e8663c5d4e9a0fa62f77f94"
+    url "https://files.pythonhosted.org/packages/ba/6e/7a7c13c21d8a4a7f82ccbfe257a045890d4dbf18c023f985f565f97393e3/Pygments-2.9.0.tar.gz"
+    sha256 "a18f47b506a429f6f4b9df81bb02beab9ca21d0a5fee38ed15aef65f0545519f"
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
-    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "wcwidth" do
