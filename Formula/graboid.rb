@@ -5,20 +5,20 @@
 class Graboid < Formula
   desc "Clientless docker image downloader."
   homepage "https://github.com/blacktop/graboid"
-  version "0.15.5"
+  version "0.15.6"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/graboid/releases/download/0.15.5/graboid_0.15.5_macOS_x86_64.tar.gz"
-      sha256 "b0dc2af7851f58b4d76fe87af256a22fd2194e42bb77eabf2ea7c33bed790af3"
+      url "https://github.com/blacktop/graboid/releases/download/0.15.6/graboid_0.15.6_macOS_x86_64.tar.gz"
+      sha256 "a5b8e9dc717f7594800d17ac94abe0501dd6e1c0a87895534a56e14351fa1fb7"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/graboid/releases/download/0.15.5/graboid_0.15.5_linux_x86_64.tar.gz"
-      sha256 "227e80bff96721cbf06de47c54e28d423f886f1c60837cce3c4ffd6d4b6b144d"
+      url "https://github.com/blacktop/graboid/releases/download/0.15.6/graboid_0.15.6_linux_x86_64.tar.gz"
+      sha256 "260a4483b53daf4961817e557a6ddb23a9d24cbfea04161481819a4d46832e32"
     end
   end
 
