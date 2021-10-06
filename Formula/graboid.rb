@@ -5,20 +5,28 @@
 class Graboid < Formula
   desc "Clientless docker image downloader."
   homepage "https://github.com/blacktop/graboid"
-  version "0.15.7"
+  version "0.15.8"
   bottle :unneeded
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/blacktop/graboid/releases/download/0.15.8/graboid_0.15.8_macOS_arm64.tar.gz"
+      sha256 "b916b7b8f11f33927a293cfb05b3f01fffbca1a6a16b1da264223a38014f3598"
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/graboid/releases/download/0.15.7/graboid_0.15.7_macOS_x86_64.tar.gz"
-      sha256 "6a29aa5220348baf9f5a7faafb62e318c8b247af71283bf5e98903682332c0d9"
+      url "https://github.com/blacktop/graboid/releases/download/0.15.8/graboid_0.15.8_macOS_x86_64.tar.gz"
+      sha256 "f6772a554b312df901087d4fb49e03776f25888b55c37158654abdbb5f22beee"
     end
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/blacktop/graboid/releases/download/0.15.8/graboid_0.15.8_linux_arm64.tar.gz"
+      sha256 "4f05c3e7428e9c4a84342ccb8afdef70b60c66c5ab8298aeba8642fcf8d60666"
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/graboid/releases/download/0.15.7/graboid_0.15.7_linux_x86_64.tar.gz"
-      sha256 "6ee0ebd4f8576263e147329dc8f28fb509bf8d3242c3ff01ba75e5bdce85c029"
+      url "https://github.com/blacktop/graboid/releases/download/0.15.8/graboid_0.15.8_linux_x86_64.tar.gz"
+      sha256 "d841cd183e18e40436d1a8b576857db066c92f79b369af74d3ea3682a81629be"
     end
   end
 
