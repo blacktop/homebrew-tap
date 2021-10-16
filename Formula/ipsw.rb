@@ -5,28 +5,30 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.0.86"
+  version "3.0.87"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.86/ipsw_3.0.86_macOS_arm64.tar.gz"
-      sha256 "5393a248ee7290771f28ebbcd574964bfe1110084bc44decc8ed62a4266733cc"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.87/ipsw_3.0.87_macOS_arm64.tar.gz"
+      sha256 "1a78579ebb0bbd660d62d503c7130e94dfc04cca9dc05cfac0834139ecb9618c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.86/ipsw_3.0.86_macOS_x86_64.tar.gz"
-      sha256 "0f8a3ba8cd6babb30f9834d0db08b86471568ff286cf178695c1d7c92c7db10f"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.87/ipsw_3.0.87_macOS_x86_64.tar.gz"
+      sha256 "442e10a6ecbec9f1e1d18d86712d65330307be33267bc370b409dc5cbc8f588f"
     end
+    url "https://github.com/blacktop/ipsw/releases/download/v3.0.87/ipsw_3.0.87_macOS_all.tar.gz"
+    sha256 "cb42f0ac8ea5338ee23aa9629244c102a773358789d567ef23647678a1c451eb"
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.86/ipsw_3.0.86_linux_arm64.tar.gz"
-      sha256 "3489950a9ec5f3a73a083a5fa8e2072a627e6b0b406abc22bc207e6f6e98b7ce"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.87/ipsw_3.0.87_linux_arm64.tar.gz"
+      sha256 "b6e4ebc03c694f3ae7505de284c85d2afeb12495bb9ce1a6ec1beb372ec34537"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.86/ipsw_3.0.86_linux_x86_64.tar.gz"
-      sha256 "52553e28ce117defe106ca0edc9cdceaa84fd024bd1c0c0fbc1702b4a7a5de64"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.87/ipsw_3.0.87_linux_x86_64.tar.gz"
+      sha256 "e8f856ecf1bb49616c702bbec37cd83e680c1806edb35c988879de6cbad4cc73"
     end
   end
 
