@@ -5,30 +5,30 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.0.89"
+  version "3.0.90"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.89/ipsw_3.0.89_macOS_arm64.tar.gz"
-      sha256 "a2144c8859dce81d67501f12017b0b6135c195de777035e3058a0cc196249446"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_macOS_arm64.tar.gz"
+      sha256 "054e03136bb1d3dbd427247244e7403f87d0f4e2047f3c5d0952e7de55e51117"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.89/ipsw_3.0.89_macOS_x86_64.tar.gz"
-      sha256 "e5f9b478c3fde12e8182a889ed355789b5169a036b19928769a7c69b89139921"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_macOS_x86_64.tar.gz"
+      sha256 "d5c022a00553dcf5ac7321f53ca1124d0cbbeb296ae5bcf627f23f9c512ced13"
     end
-    url "https://github.com/blacktop/ipsw/releases/download/v3.0.89/ipsw_3.0.89_macOS_universal.tar.gz"
-    sha256 "a5b1896ded5a6389ccdebf2409293c3a6777a0a194dfdd27bc609453b077039e"
+    url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_macOS_universal.tar.gz"
+    sha256 "d5edb8ac1e469ced6a8086a400c228b727e20050de521948dee4f3001a795e72"
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.89/ipsw_3.0.89_linux_arm64.tar.gz"
-      sha256 "92d4b91b53236618a0a67a69fae35f4fadda0c396917aea51b179eb966ef00c7"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_linux_arm64.tar.gz"
+      sha256 "c0a209521db5e6df3ed1c907ffb36a4ffe575943ea1a65ea30856a666b895a80"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.89/ipsw_3.0.89_linux_x86_64.tar.gz"
-      sha256 "a0880f92cf45b347065033d2eaa60d80b25b94c429d0743bea1b48c26fd85a99"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_linux_x86_64.tar.gz"
+      sha256 "b057e1a1a605ec7ff8660269d46532568a32d8175bffece0937fb9f4570e3fcb"
     end
   end
 
@@ -36,12 +36,12 @@ class Ipsw < Formula
 
   def install
     bin.install "ipsw"
+    bash_completion.install "completions/_bash" => "ipsw"
+    zsh_completion.install "completions/_zsh" => "_ipsw"
+    fish_completion.install "completions/_fish" => "ipsw.fish"
   end
 
   test do
     system "#{bin}/ipsw --version"
-    bash_completion.install "completions/_bash" => "ipsw"
-    zsh_completion.install "completions/_zsh" => "_ipsw"
-    fish_completion.install "completions/_fish" => "ipsw.fish"
   end
 end
