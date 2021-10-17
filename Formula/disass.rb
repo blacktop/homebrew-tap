@@ -5,21 +5,13 @@
 class Disass < Formula
   desc "MachO ARMv9-a Disassembler"
   homepage "https://github.com/blacktop/arm64-cgo"
-  version "1.0.35"
+  version "1.0.36"
   bottle :unneeded
   depends_on :macos
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/blacktop/arm64-cgo/releases/download/v1.0.35/disass_1.0.35_macOS_arm64.tar.gz"
-      sha256 "8830ea30f6dcfc2e5e98a1cc68e3ea0f94ef93be077b72e257e42c7e85b46d19"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/blacktop/arm64-cgo/releases/download/v1.0.35/disass_1.0.35_macOS_x86_64.tar.gz"
-      sha256 "165843b8642d743a2df4f8dda0ea2c409a7f6d9e8403ac40f8dc8bc50666b994"
-    end
-    url "https://github.com/blacktop/arm64-cgo/releases/download/v1.0.35/disass_1.0.35_macOS_universal.tar.gz"
-    sha256 "c91078c560d76fed7545250f68532cd15f44d1b21e5cc987050c05a4ac861a11"
+    url "https://github.com/blacktop/arm64-cgo/releases/download/v1.0.36/disass_1.0.36_macOS_universal.tar.gz"
+    sha256 "ca4f9c0bbe0b0e5c81dada68965b103c14093d8e4b93bf3e6091988f0b51d510"
   end
 
   depends_on "bat" => :optional
