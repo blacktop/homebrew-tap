@@ -5,30 +5,30 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.0.90"
+  version "3.0.91"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_macOS_arm64.tar.gz"
-      sha256 "054e03136bb1d3dbd427247244e7403f87d0f4e2047f3c5d0952e7de55e51117"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.91/ipsw_3.0.91_macOS_arm64.tar.gz"
+      sha256 "4dca1356f0ff437dc3868a59d9e36f6ab1f3e9b9b829946c3d83a0749856a67e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_macOS_x86_64.tar.gz"
-      sha256 "d5c022a00553dcf5ac7321f53ca1124d0cbbeb296ae5bcf627f23f9c512ced13"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.91/ipsw_3.0.91_macOS_x86_64.tar.gz"
+      sha256 "0270036cc592e870f73d35be924610384502e7c69d5124a646420207a6fc6ba5"
     end
-    url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_macOS_universal.tar.gz"
-    sha256 "d5edb8ac1e469ced6a8086a400c228b727e20050de521948dee4f3001a795e72"
+    url "https://github.com/blacktop/ipsw/releases/download/v3.0.91/ipsw_3.0.91_macOS_universal.tar.gz"
+    sha256 "e1f1588d1157f1466976f9eb8c9bb49900e467b059d066f1ba3de730baa2e4fe"
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_linux_arm64.tar.gz"
-      sha256 "c0a209521db5e6df3ed1c907ffb36a4ffe575943ea1a65ea30856a666b895a80"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.91/ipsw_3.0.91_linux_arm64.tar.gz"
+      sha256 "b658f045541922db45c95b44f3217e3d0e13160f5f1d27670d79c479877ff37b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.90/ipsw_3.0.90_linux_x86_64.tar.gz"
-      sha256 "b057e1a1a605ec7ff8660269d46532568a32d8175bffece0937fb9f4570e3fcb"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.91/ipsw_3.0.91_linux_x86_64.tar.gz"
+      sha256 "97e14838e9ec403f36a97ceb1dd22c9a1ab57688a2a7088b479f5bde68afbc0b"
     end
   end
 
