@@ -6,7 +6,6 @@ class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
   version "3.0.92"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?

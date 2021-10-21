@@ -3,7 +3,6 @@ class Lporg < Formula
   desc "Organize Your macOS Launchpad Apps."
   homepage "https://github.com/blacktop/lporg"
   version "20.04.3"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/blacktop/lporg/releases/download/v20.04.3/lporg_20.04.3_macOS_amd64.tar.gz"

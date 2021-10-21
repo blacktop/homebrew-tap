@@ -6,7 +6,6 @@ class Apfs < Formula
   desc "MachO ARMv9-a apfsembler"
   homepage "https://github.com/blacktop/go-apfs"
   version "1.0.9"
-  bottle :unneeded
   depends_on :macos
 
   on_macos do
