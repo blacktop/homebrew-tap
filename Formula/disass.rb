@@ -6,7 +6,6 @@ class Disass < Formula
   desc "MachO ARMv9-a Disassembler"
   homepage "https://github.com/blacktop/arm64-cgo"
   version "1.0.41"
-  bottle :unneeded
   depends_on :macos
 
   on_macos do

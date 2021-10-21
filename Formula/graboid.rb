@@ -6,7 +6,6 @@ class Graboid < Formula
   desc "Clientless docker image downloader."
   homepage "https://github.com/blacktop/graboid"
   version "0.15.8"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
