@@ -5,40 +5,68 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.0.92"
+  version "3.0.93"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.92/ipsw_3.0.92_macOS_arm64.tar.gz"
-      sha256 "808a504e507fcb24c1cf946ce3b0b7a5b5802ca501c6fc0a95065fcad7988c6f"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.93/ipsw_3.0.93_macOS_arm64.tar.gz"
+      sha256 "317d70ecb77af42e6c92f00c76a23d021537b500badcbfbbea10bd4b57051d3f"
+
+      def install
+        bin.install "ipsw"
+        bash_completion.install "completions/_bash" => "ipsw"
+        zsh_completion.install "completions/_zsh" => "_ipsw"
+        fish_completion.install "completions/_fish" => "ipsw.fish"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.92/ipsw_3.0.92_macOS_x86_64.tar.gz"
-      sha256 "78d59b63f300664a176891b27a685ec5dccedb70419f7b6af9e3859adb19d8e9"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.93/ipsw_3.0.93_macOS_x86_64.tar.gz"
+      sha256 "38d99046ff919955e834cadd3a2cc2d88bfaf1324f9a6df91c9bd41f8c3dc808"
+
+      def install
+        bin.install "ipsw"
+        bash_completion.install "completions/_bash" => "ipsw"
+        zsh_completion.install "completions/_zsh" => "_ipsw"
+        fish_completion.install "completions/_fish" => "ipsw.fish"
+      end
     end
-    url "https://github.com/blacktop/ipsw/releases/download/v3.0.92/ipsw_3.0.92_macOS_universal.tar.gz"
-    sha256 "ff0443fa0ea3391654ed39370e92fc5585618551ee446e6fdb67867388287ada"
+    url "https://github.com/blacktop/ipsw/releases/download/v3.0.93/ipsw_3.0.93_macOS_universal.tar.gz"
+    sha256 "d331af8a03888df0fa9bb4c9582fe43bee0e89ce5d721f5b2358fd5af0f6c073"
+
+    def install
+      bin.install "ipsw"
+      bash_completion.install "completions/_bash" => "ipsw"
+      zsh_completion.install "completions/_zsh" => "_ipsw"
+      fish_completion.install "completions/_fish" => "ipsw.fish"
+    end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.92/ipsw_3.0.92_linux_arm64.tar.gz"
-      sha256 "4340d22cbd6ae908d9677f59b2ecf0443b636739bf08ef4f11f131fd315d42fa"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.93/ipsw_3.0.93_linux_arm64.tar.gz"
+      sha256 "1b5c4c17e2b972a2f233f7aed23d73e63b235cd60cfccbec4da2c1451e977496"
+
+      def install
+        bin.install "ipsw"
+        bash_completion.install "completions/_bash" => "ipsw"
+        zsh_completion.install "completions/_zsh" => "_ipsw"
+        fish_completion.install "completions/_fish" => "ipsw.fish"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.0.92/ipsw_3.0.92_linux_x86_64.tar.gz"
-      sha256 "3482dbe03264b837483b0f2653b09ce676e5d119409259995caaf3d48c1ff7c2"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.0.93/ipsw_3.0.93_linux_x86_64.tar.gz"
+      sha256 "23f0668c6629f10e5d257c02b237421ddefbc36c90f110549523db50d09c5f82"
+
+      def install
+        bin.install "ipsw"
+        bash_completion.install "completions/_bash" => "ipsw"
+        zsh_completion.install "completions/_zsh" => "_ipsw"
+        fish_completion.install "completions/_fish" => "ipsw.fish"
+      end
     end
   end
 
   depends_on "bat" => :optional
-
-  def install
-    bin.install "ipsw"
-    bash_completion.install "completions/_bash" => "ipsw"
-    zsh_completion.install "completions/_zsh" => "_ipsw"
-    fish_completion.install "completions/_fish" => "ipsw.fish"
-  end
 
   test do
     system "#{bin}/ipsw --version"
