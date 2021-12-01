@@ -5,12 +5,12 @@
 class Ipsw < Formula
   desc "Download and parse ipsw(s)"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.17"
+  version "3.1.18"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.17/ipsw_3.1.17_macOS_arm64.tar.gz"
-      sha256 "f8c3f0a7eae0c5b6447ce88265fdc25f3999c048410efb5aa59e8ab81c79cc89"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.18/ipsw_3.1.18_macOS_arm64.tar.gz"
+      sha256 "646cf4dd6d97dd43f36438246d70fb42843f248bc4dfd5e3cf3c131ada9f329a"
 
       def install
         bin.install "ipsw"
@@ -20,8 +20,8 @@ class Ipsw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.17/ipsw_3.1.17_macOS_x86_64.tar.gz"
-      sha256 "b6312b0bdda97d2998c748b4140c494c841a7ef2ab7217474d5f2b02883e516f"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.18/ipsw_3.1.18_macOS_x86_64.tar.gz"
+      sha256 "4a2eab9b2e857333fedae6bb5d7e7dbe158ee74cd437d7cc2c2edcbf46e2be0d"
 
       def install
         bin.install "ipsw"
@@ -30,8 +30,8 @@ class Ipsw < Formula
         fish_completion.install "completions/_fish" => "ipsw.fish"
       end
     end
-    url "https://github.com/blacktop/ipsw/releases/download/v3.1.17/ipsw_3.1.17_macOS_universal.tar.gz"
-    sha256 "b40d20d0f931900a64f0fe350fde926e5ac00a418a1650e92253127e9ababfa8"
+    url "https://github.com/blacktop/ipsw/releases/download/v3.1.18/ipsw_3.1.18_macOS_universal.tar.gz"
+    sha256 "ed802c017d9fc1f2e6642e9d74cd787e63289bb02cbdffc7785669826808dd66"
 
     def install
       bin.install "ipsw"
@@ -43,8 +43,8 @@ class Ipsw < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.17/ipsw_3.1.17_linux_arm64.tar.gz"
-      sha256 "b2e01ec8a97a50932404cfd48fdd446d58b12d4c5ea9d2b4d5faf8a778c44fee"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.18/ipsw_3.1.18_linux_arm64.tar.gz"
+      sha256 "33bdd324e3fbe82adf52ad9765b57a25e07759d4e1fc404f895058e15e1906d9"
 
       def install
         bin.install "ipsw"
@@ -54,8 +54,8 @@ class Ipsw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.17/ipsw_3.1.17_linux_x86_64.tar.gz"
-      sha256 "ec2a9924fb9f77b9898641dd667b14cd7f8a3d82461d1b32998f6f32400ad138"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.18/ipsw_3.1.18_linux_x86_64.tar.gz"
+      sha256 "7b4495cdb1054f52b7661a27709bb780640623aae4b040f333bc1fc35be1615c"
 
       def install
         bin.install "ipsw"
