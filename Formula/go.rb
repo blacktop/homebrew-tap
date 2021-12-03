@@ -1,7 +1,7 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://golang.org"
-  url "https://golang.org/dl/go1.17.3.src.tar.gz"
+  url "https://golang.org/dl/go1.17.4.src.tar.gz"
   mirror "https://fossies.org/linux/misc/go1.17.4.src.tar.gz"
   sha256 "4bef3699381ef09e075628504187416565d710660fec65b057edf1ceb187fc4b"
   license "BSD-3-Clause"
