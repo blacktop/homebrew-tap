@@ -3,8 +3,8 @@ class FridaTools < Formula
 
   desc "CLI tools for Frida"
   homepage "https://www.frida.re/"
-  url "https://files.pythonhosted.org/packages/d8/c0/4d00f9e85b499bed8857971040e9a5b9e6f1a995fb3569d25984eaf5294c/frida-tools-9.2.5.tar.gz"
-  sha256 "354736266f9da2586d4a1a9327886de896ed97a59087c373225999f7e1ceb372"
+  url "https://files.pythonhosted.org/packages/57/0c/6b71aba8932e1c4d2c64b5305bcf9788894213eb8b7c75bad0fcdf861788/frida-tools-10.4.1.tar.gz"
+  sha256 "05cbd496b284d7eabecc914f8655d7a9dd0d735cf76226110462a5c56aa070ca"
   license "MIT"
   revision 3
 
@@ -21,18 +21,18 @@ class FridaTools < Formula
   end
 
   resource "frida" do
-    url "https://files.pythonhosted.org/packages/a4/9b/47060185e90b7641dd9776a8577b9b048ae5ebce62db91e757ba91455aff/frida-14.2.18.tar.gz"
-    sha256 "f0e40b8b2efec32a540c259b923ee65a73a6085c1f30d139adf01c859abaf47a"
+    url "https://files.pythonhosted.org/packages/9a/d6/fb62513f014ec83d00a224dfa057829ed814a4a7e0a39379dfe2520ed8a1/frida-15.1.14.tar.gz"
+    sha256 "b44ceee06744b7c5e153d3afa83f1f0ec3e1d7e6f1c291954221f063c88cad95"
   end
 
   resource "prompt_toolkit" do
-    url "https://files.pythonhosted.org/packages/88/4b/2c0f9e2b52297bdeede91c8917c51575b125006da5d0485521fa2b1e0b75/prompt_toolkit-3.0.19.tar.gz"
-    sha256 "08360ee3a3148bdb5163621709ee322ec34fc4375099afa4bbf751e9b7b7fa4f"
+    url "https://files.pythonhosted.org/packages/1b/1e/09b545d3608a8092c34132972ec1078d3356381a2c8553fd71d2ed6036a3/prompt_toolkit-3.0.26.tar.gz"
+    sha256 "a51d41a6a45fd9def54365bca8f0402c8f182f2b6f7e29c74d55faeb9fb38ac4"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/ba/6e/7a7c13c21d8a4a7f82ccbfe257a045890d4dbf18c023f985f565f97393e3/Pygments-2.9.0.tar.gz"
-    sha256 "a18f47b506a429f6f4b9df81bb02beab9ca21d0a5fee38ed15aef65f0545519f"
+    url "https://files.pythonhosted.org/packages/94/9c/cb656d06950268155f46d4f6ce25d7ffc51a0da47eadf1b164bbf23b718b/Pygments-2.11.2.tar.gz"
+    sha256 "4e426f72023d88d03b2fa258de560726ce890ff3b630f88c21cbb8b2503b8c6a"
   end
 
   resource "six" do
