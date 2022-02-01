@@ -5,12 +5,12 @@
 class Apfs < Formula
   desc "APFS parser written in pure Go"
   homepage "https://github.com/blacktop/go-apfs"
-  version "1.0.12"
+  version "1.0.13"
   depends_on :macos
 
   on_macos do
-    url "https://github.com/blacktop/go-apfs/releases/download/v1.0.12/apfs_1.0.12_macOS_universal.tar.gz"
-    sha256 "2b4fa31434709ce324c2980dece7a6d19c5c30677735a27ae9bbfb65d1e55b6e"
+    url "https://github.com/blacktop/go-apfs/releases/download/v1.0.13/apfs_1.0.13_macOS_universal.tar.gz"
+    sha256 "37837193c1efae47626731fe97d6274990539292600a4b1eef0608f75ac6bd06"
 
     def install
       bin.install "apfs"
