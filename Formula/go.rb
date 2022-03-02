@@ -1,14 +1,14 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
-  homepage "https://golang.org"
-  url "https://golang.org/dl/go1.17.7.src.tar.gz"
+  homepage "https://go.dev/"
+  url "https://go.dev/dl/go1.17.7.src.tar.gz"
   mirror "https://fossies.org/linux/misc/go1.17.7.src.tar.gz"
   sha256 "c108cd33b73b1911a02b697741df3dea43e01a5c4e08e409e8b3a0e3745d2b4d"
   license "BSD-3-Clause"
-  head "https://go.googlesource.com/go.git"
+  head "https://go.googlesource.com/go.git", branch: "master"
 
   livecheck do
-    url "https://golang.org/dl/"
+    url "https://go.dev/dl/"
     regex(/href=.*?go[._-]?v?(\d+(?:\.\d+)+)[._-]src\.t/i)
   end
 
@@ -27,9 +27,15 @@ class Go < Formula
     end
 
     on_linux do
-      url "https://storage.googleapis.com/golang/go1.16.linux-amd64.tar.gz"
-      version "1.16"
-      sha256 "013a489ebb3e24ef3d915abe5b94c3286c070dfe0818d5bca8108f1d6e8440d2"
+      if Hardware::CPU.arm?
+        url "https://storage.googleapis.com/golang/go1.16.linux-arm64.tar.gz"
+        version "1.16"
+        sha256 "3770f7eb22d05e25fbee8fb53c2a4e897da043eb83c69b9a14f8d98562cd8098"
+      else
+        url "https://storage.googleapis.com/golang/go1.16.linux-amd64.tar.gz"
+        version "1.16"
+        sha256 "013a489ebb3e24ef3d915abe5b94c3286c070dfe0818d5bca8108f1d6e8440d2"
+      end
     end
   end
 
@@ -59,9 +65,7 @@ class Go < Formula
   test do
     (testpath/"hello.go").write <<~EOS
       package main
-
       import "fmt"
-
       func main() {
           fmt.Println("Hello World")
       }
