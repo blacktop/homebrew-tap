@@ -3,8 +3,8 @@ class FridaTools < Formula
 
   desc "CLI tools for Frida"
   homepage "https://www.frida.re/"
-  url "https://files.pythonhosted.org/packages/57/0c/6b71aba8932e1c4d2c64b5305bcf9788894213eb8b7c75bad0fcdf861788/frida-tools-10.4.1.tar.gz"
-  sha256 "05cbd496b284d7eabecc914f8655d7a9dd0d735cf76226110462a5c56aa070ca"
+  url "https://files.pythonhosted.org/packages/78/fe/e73984036a07df63ed9c0c83a12037f59c7dfbc9fe3e8bbcf4b1a67b9c53/frida-tools-10.5.4.tar.gz"
+  sha256 "8f96826ccb30d14890eff26f07ef94454f33fac729afe8bd6e5daccbb2f6e2c0"
   license "MIT"
   revision 3
 
@@ -21,13 +21,13 @@ class FridaTools < Formula
   end
 
   resource "frida" do
-    url "https://files.pythonhosted.org/packages/9a/d6/fb62513f014ec83d00a224dfa057829ed814a4a7e0a39379dfe2520ed8a1/frida-15.1.14.tar.gz"
-    sha256 "b44ceee06744b7c5e153d3afa83f1f0ec3e1d7e6f1c291954221f063c88cad95"
+    url "https://files.pythonhosted.org/packages/c6/0e/9b837472e1dd866ef002a6bf5f2dde42b0c4f0bfcf8f5ab80797a148025e/frida-15.1.17.tar.gz"
+    sha256 "7f2a8e41864648e3bab86d24a52f8ac1b451b3e6de069b6ce311e618bd59b758"
   end
 
   resource "prompt_toolkit" do
-    url "https://files.pythonhosted.org/packages/1b/1e/09b545d3608a8092c34132972ec1078d3356381a2c8553fd71d2ed6036a3/prompt_toolkit-3.0.26.tar.gz"
-    sha256 "a51d41a6a45fd9def54365bca8f0402c8f182f2b6f7e29c74d55faeb9fb38ac4"
+    url "https://files.pythonhosted.org/packages/37/34/c34c376882305c5051ed7f086daf07e68563d284015839bfb74d6e61d402/prompt_toolkit-3.0.28.tar.gz"
+    sha256 "9f1cd16b1e86c2968f2519d7fb31dd9d669916f515612c269d14e9ed52b51650"
   end
 
   resource "Pygments" do
