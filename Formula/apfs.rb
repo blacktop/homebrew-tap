@@ -10,7 +10,7 @@ class Apfs < Formula
 
   on_macos do
     url "https://github.com/blacktop/go-apfs/releases/download/v1.0.16/apfs_1.0.16_macOS_universal.tar.gz"
-    sha256 "9d9ad565931e9318de78da15726d25be1b7fb3558dac24b80c485c7b73d92e63"
+    sha256 "22e4e2f4d3b52116494fa53d40b2377840ccc4f05760b9d68dd80c45ab9092bc"
 
     def install
       bin.install "apfs"
