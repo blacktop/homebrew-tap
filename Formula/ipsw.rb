@@ -5,14 +5,14 @@
 class Ipsw < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.136"
+  version "3.1.137"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.136/ipsw_3.1.136_macOS_arm64.tar.gz"
-      sha256 "890cc004e8639ed63118d18a199f161d9403c6c7d32c41c6f866a86d5defddb3"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.137/ipsw_3.1.137_macOS_arm64.tar.gz"
+      sha256 "b14ed948a533ee90ccf2bb3270562b43ba8bfba01f69cbdf90aa10cede7cfdf7"
 
       def install
         bin.install "ipsw"
@@ -23,8 +23,8 @@ class Ipsw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.136/ipsw_3.1.136_macOS_x86_64.tar.gz"
-      sha256 "901fd318556e2993e47feef455a1484744b8ebfee5fae48d74b9cc84ed46b44f"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.137/ipsw_3.1.137_macOS_x86_64.tar.gz"
+      sha256 "6b285bd3c07eb367e39e73a5b9d75f66e349d9dd4db0ce4a413978d12f880018"
 
       def install
         bin.install "ipsw"
