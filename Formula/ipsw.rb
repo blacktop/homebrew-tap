@@ -5,14 +5,14 @@
 class Ipsw < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.155"
+  version "3.1.156"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.155/ipsw_3.1.155_macOS_arm64.tar.gz"
-      sha256 "bb3aa12f2297d7169a3f22f6bc1f6367678d06dbf065a60586fd55394e0921a7"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.156/ipsw_3.1.156_macOS_arm64_extras.tar.gz"
+      sha256 "0634588a45ada6c017fec264fba7df734459cc733b0d8768122f1c69f9a54bc7"
 
       def install
         bin.install "ipsw"
@@ -21,16 +21,6 @@ class Ipsw < Formula
         fish_completion.install "completions/_fish" => "ipsw.fish"
         man1.install Dir["manpages/*"]
       end
-    end
-    url "https://github.com/blacktop/ipsw/releases/download/v3.1.155/ipsw_3.1.155_macOS_universal.tar.gz"
-    sha256 "6177a2496216448dac87ce2051d56151e38871951991810697e08f3c39a7a081"
-
-    def install
-      bin.install "ipsw"
-      bash_completion.install "completions/_bash" => "ipsw"
-      zsh_completion.install "completions/_zsh" => "_ipsw"
-      fish_completion.install "completions/_fish" => "ipsw.fish"
-      man1.install Dir["manpages/*"]
     end
   end
 
