@@ -12,7 +12,7 @@ class Ipsw < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/blacktop/ipsw/releases/download/v3.1.159/ipsw_3.1.159_macOS_arm64.tar.gz"
-      sha256 "a64e2c0cb9db71b06a63011b658c7c62c44838f41ad05007da9a8ee5cc68b4fc"
+      sha256 "8c10ffc453bc8b2a7fece2c8e3c0c98b131b102c0d8e0c2f99ef996958b4d856"
 
       def install
         bin.install "ipsw"
@@ -24,7 +24,7 @@ class Ipsw < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/blacktop/ipsw/releases/download/v3.1.159/ipsw_3.1.159_macOS_x86_64.tar.gz"
-      sha256 "0fd5bc88a90216089cad228e47555f4da7b20e049a445efb332edc2572ae4a7a"
+      sha256 "349ffcb258e1148fbc29126d6a587b8288d2d286c4189f48b77cb1657c6774aa"
 
       def install
         bin.install "ipsw"
