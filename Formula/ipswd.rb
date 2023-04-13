@@ -62,7 +62,7 @@ class Ipswd < Formula
   end
 
   service do
-    run opt_bin/"ipswd"
+    run [opt_bin/"ipswd", "start"]
     keep_alive true
     sockets "tcp://127.0.0.1:3993"
   end
