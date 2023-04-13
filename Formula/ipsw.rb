@@ -5,7 +5,7 @@
 class Ipsw < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.311"
+  version "3.1.312"
   license "MIT"
 
   depends_on "bat" => :optional
@@ -16,26 +16,26 @@ class Ipsw < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.311/ipsw_3.1.311_macOS_arm64_extras.tar.gz"
-      sha256 "b87b30f413414a1a0828e45b894fdb7f606d6b5ddd0cd62755eb906c879ca669"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.312/ipsw_3.1.312_macOS_arm64_extras.tar.gz"
+      sha256 "d2e087c2299d434c0191d6fc9c6ceba3bc69252a05c3ce344ea23c30c1d72c3d"
 
       def install
         bin.install "ipsw"
-        bash_completion.install "completions/_bash" => "ipsw"
-        zsh_completion.install "completions/_zsh" => "_ipsw"
-        fish_completion.install "completions/_fish" => "ipsw.fish"
+        bash_completion.install "completions/ipsw/_bash" => "ipsw"
+        zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
+        fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
         man1.install Dir["manpages/*"]
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.311/ipsw_3.1.311_macOS_x86_64_extras.tar.gz"
-      sha256 "0b0b2fed600d88136e281a038b90cc139215ea0884fe0589b5287ae299ea0e47"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.312/ipsw_3.1.312_macOS_x86_64_extras.tar.gz"
+      sha256 "9bfac5473d404db49b6f0ea5b4304b36209dc239e9746514e692ac4d9d29aa47"
 
       def install
         bin.install "ipsw"
-        bash_completion.install "completions/_bash" => "ipsw"
-        zsh_completion.install "completions/_zsh" => "_ipsw"
-        fish_completion.install "completions/_fish" => "ipsw.fish"
+        bash_completion.install "completions/ipsw/_bash" => "ipsw"
+        zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
+        fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
         man1.install Dir["manpages/*"]
       end
     end
