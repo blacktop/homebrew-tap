@@ -62,9 +62,9 @@ class Ipswd < Formula
   end
 
   service do
-    run: ipswd
-    keep_alive: true
-    sockets: /var/run/ipsw.sock
+    run opt_sbin/"ipswd"
+    keep_alive true
+    sockets /var/run/ipsw.sock
   end
 
   test do
