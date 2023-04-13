@@ -64,7 +64,7 @@ class Ipswd < Formula
   service do
     run opt_bin/"ipswd"
     keep_alive true
-    sockets "unix:///var/run/ipsw.sock"
+    sockets "unix://var/run/ipsw.sock"
   end
 
   test do
