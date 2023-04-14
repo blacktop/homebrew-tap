@@ -5,7 +5,7 @@
 class Ipsw < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.315"
+  version "3.1.316"
   license "MIT"
 
   depends_on "bat" => :optional
@@ -16,29 +16,31 @@ class Ipsw < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.315/ipsw_3.1.315_macOS_arm64_extras.tar.gz"
-      sha256 "98622dcd90311368038464bdc262dbd5148ef99391f8a421c5e7997ff840cd96"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.316/ipsw_3.1.316_macOS_arm64_extras.tar.gz"
+      sha256 "7401934f6c2a55e076b87182f130f735415d68d5033d846527d4ed7bfd7cb56e"
 
       def install
         bin.install "ipsw"
+        prefix.install "LICENSE", "README.md"
+        prefix.install "config.example.yml" => "config.yml"
         bash_completion.install "completions/ipsw/_bash" => "ipsw"
         zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
         fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
         man1.install Dir["manpages/*"]
-        etc.install "config.example.yml" => "config.yml"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.315/ipsw_3.1.315_macOS_x86_64_extras.tar.gz"
-      sha256 "9dea53999616fb042d67ca8ebdab3b2d286f023dbdd9832cb1acf05dd112464e"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.316/ipsw_3.1.316_macOS_x86_64_extras.tar.gz"
+      sha256 "46edcc08af8607136ffa589f974856a7b15837f0cc4b93aa545516412428f1b4"
 
       def install
         bin.install "ipsw"
+        prefix.install "LICENSE", "README.md"
+        prefix.install "config.example.yml" => "config.yml"
         bash_completion.install "completions/ipsw/_bash" => "ipsw"
         zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
         fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
         man1.install Dir["manpages/*"]
-        etc.install "config.example.yml" => "config.yml"
       end
     end
   end
