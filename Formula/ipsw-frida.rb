@@ -5,7 +5,7 @@
 class IpswFrida < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.315"
+  version "3.1.316"
   license "MIT"
 
   depends_on "bat" => :optional
@@ -14,29 +14,31 @@ class IpswFrida < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.315/ipsw_3.1.315_macOS_arm64_frida.tar.gz"
-      sha256 "4d3e4dd307aa81f9863c5853907ba07785d6c7c132e67cb67ada34c09741d59c"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.316/ipsw_3.1.316_macOS_arm64_frida.tar.gz"
+      sha256 "c33126605801f2102942f7c776b6cc5b110dded090af61e0bb85ee1d7f43c106"
 
       def install
         bin.install "ipsw"
+        prefix.install "LICENSE", "README.md"
+        prefix.install "config.example.yml" => "config.yml"
         bash_completion.install "completions/ipsw/_bash" => "ipsw"
         zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
         fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
         man1.install Dir["manpages/*"]
-        etc.install "config.example.yml" => "config.yml"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.315/ipsw_3.1.315_macOS_x86_64_frida.tar.gz"
-      sha256 "df0ea9bba7af5e22f7bd6997b2cfeaa1864e206b31a9e97fc24f5f01ba2aa511"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.316/ipsw_3.1.316_macOS_x86_64_frida.tar.gz"
+      sha256 "86d7c899322d82ec1c054cf89463a3cc5f71bd815d8a18435eb1a45b923a0342"
 
       def install
         bin.install "ipsw"
+        prefix.install "LICENSE", "README.md"
+        prefix.install "config.example.yml" => "config.yml"
         bash_completion.install "completions/ipsw/_bash" => "ipsw"
         zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
         fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
         man1.install Dir["manpages/*"]
-        etc.install "config.example.yml" => "config.yml"
       end
     end
   end
