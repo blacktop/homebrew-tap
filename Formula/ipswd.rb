@@ -5,7 +5,7 @@
 class Ipswd < Formula
   desc "ipsw - Daemon"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.314"
+  version "3.1.315"
   license "MIT"
 
   depends_on "ipsw"
@@ -13,50 +13,54 @@ class Ipswd < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.314/ipsw_3.1.314_macOS_arm64_daemon.tar.gz"
-      sha256 "3fcf0705215a31852a0dcd7238780b0cbb50eb682fd8ada1baef2f4eda911d50"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.315/ipsw_3.1.315_macOS_arm64_daemon.tar.gz"
+      sha256 "06e652568ac0ff759fff5ee1e92a18a8d97584c6fbceddc3a1b941b2120a0346"
 
       def install
         bin.install "ipswd"
         bash_completion.install "completions/ipswd/_bash" => "ipswd"
         zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
+        etc.install "config.example.yml" => "config.yml"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.314/ipsw_3.1.314_macOS_x86_64_daemon.tar.gz"
-      sha256 "ec13fa8a15c06546aedf36ee04c2802fb79af703257a7343e08f3519b85e0047"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.315/ipsw_3.1.315_macOS_x86_64_daemon.tar.gz"
+      sha256 "d6534cbdadce90d5ab41559f3d889b30d51db5551e81ea1133b3c974cdf6a0e8"
 
       def install
         bin.install "ipswd"
         bash_completion.install "completions/ipswd/_bash" => "ipswd"
         zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
+        etc.install "config.example.yml" => "config.yml"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.314/ipsw_3.1.314_linux_arm64_daemon.tar.gz"
-      sha256 "4609a40a585f0f0c7af0afe618115b53988fbf29a29743adc85b1c6f4fbf47ad"
+    if Hardware::CPU.intel?
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.315/ipsw_3.1.315_linux_x86_64_daemon.tar.gz"
+      sha256 "869c65bb31056a3d7f13623502e329a03a50f5153e0b2b76c8c02b9d8b2fdfc5"
 
       def install
         bin.install "ipswd"
         bash_completion.install "completions/ipswd/_bash" => "ipswd"
         zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
+        etc.install "config.example.yml" => "config.yml"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.314/ipsw_3.1.314_linux_x86_64_daemon.tar.gz"
-      sha256 "9c0215c9113eaa9c831d07091d1d82d8733361943418319d34a85581ea20f75b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.315/ipsw_3.1.315_linux_arm64_daemon.tar.gz"
+      sha256 "e0cfb62879361d68b1dc1b5dec2435703c90cdb81bc14ddc3fc24fca0d160a2e"
 
       def install
         bin.install "ipswd"
         bash_completion.install "completions/ipswd/_bash" => "ipswd"
         zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
+        etc.install "config.example.yml" => "config.yml"
       end
     end
   end
