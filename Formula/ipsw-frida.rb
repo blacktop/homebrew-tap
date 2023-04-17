@@ -5,7 +5,7 @@
 class IpswFrida < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.319"
+  version "3.1.320"
   license "MIT"
 
   depends_on "bat" => :optional
@@ -14,13 +14,14 @@ class IpswFrida < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.319/ipsw_3.1.319_macOS_arm64_frida.tar.gz"
-      sha256 "b28213af817d97e374bdeb426769bc802551c6d319921a295ddceeb793063236"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.320/ipsw_3.1.320_macOS_arm64_frida.tar.gz"
+      sha256 "5a38e30dfd8445bb567cf8639b3aa7f03f2bb352cfb03b32d5bbefcdfe5d0d47"
 
       def install
         bin.install "ipsw"
-        prefix.install "LICENSE", "README.md"
-        prefix.install "config.example.yml" => "config.yml"
+        prefix.install "LICENSE", "README.md", "config.example.yml"
+        (etc/"ipsw").mkpath
+        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
         bash_completion.install "completions/ipsw/_bash" => "ipsw"
         zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
         fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
@@ -28,13 +29,14 @@ class IpswFrida < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.319/ipsw_3.1.319_macOS_x86_64_frida.tar.gz"
-      sha256 "3019b35b5c45d62cfc30a182c59d898caf0a8bdae421a1e47d4af80df1a9b20d"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.320/ipsw_3.1.320_macOS_x86_64_frida.tar.gz"
+      sha256 "64c8db9854427829b5bb6d0229daf654a492f6a70f10f2024be46364db2211bd"
 
       def install
         bin.install "ipsw"
-        prefix.install "LICENSE", "README.md"
-        prefix.install "config.example.yml" => "config.yml"
+        prefix.install "LICENSE", "README.md", "config.example.yml"
+        (etc/"ipsw").mkpath
+        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
         bash_completion.install "completions/ipsw/_bash" => "ipsw"
         zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
         fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
