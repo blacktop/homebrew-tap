@@ -5,37 +5,35 @@
 class Ipswd < Formula
   desc "ipsw - Daemon"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.319"
+  version "3.1.320"
   license "MIT"
 
   depends_on "libusb" => :optional
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.319/ipswd_3.1.319_macOS_arm64.tar.gz"
-      sha256 "5728c23558e4a556142820359b7641e1cda633f80a0980b3e954155a6f585f1f"
+    if Hardware::CPU.intel?
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.320/ipswd_3.1.320_macOS_x86_64.tar.gz"
+      sha256 "a3bbb21e6bc1063090f9ae6f35520105c6c33d689040165771f6e76685f3fa3d"
 
       def install
         bin.install "ipswd"
-        prefix.install "LICENSE", "README.md"
-        pkgshare.install "config.example.yml" => "ipsw/config.yml"
-        etc.install pkgshare/"ipsw/config.yml" => "ipsw/config.yml"
-        prefix.install_symlink etc/"ipsw/config.yml" => "config.yaml"
+        prefix.install "LICENSE", "README.md", "config.example.yml"
+        (etc/"ipsw").mkpath
+        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
         bash_completion.install "completions/ipswd/_bash" => "ipswd"
         zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.319/ipswd_3.1.319_macOS_x86_64.tar.gz"
-      sha256 "43640d1ebb4d0d74f9eba33401f24a9ac78ccd9eb87674ed34d7438df1e4cc2a"
+    if Hardware::CPU.arm?
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.320/ipswd_3.1.320_macOS_arm64.tar.gz"
+      sha256 "97060f43a049ce249dc25321c691cd5c49dd4d7d617c7425522a865ec2793ac6"
 
       def install
         bin.install "ipswd"
-        prefix.install "LICENSE", "README.md"
-        pkgshare.install "config.example.yml" => "ipsw/config.yml"
-        etc.install pkgshare/"ipsw/config.yml" => "ipsw/config.yml"
-        prefix.install_symlink etc/"ipsw/config.yml" => "config.yaml"
+        prefix.install "LICENSE", "README.md", "config.example.yml"
+        (etc/"ipsw").mkpath
+        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
         bash_completion.install "completions/ipswd/_bash" => "ipswd"
         zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
@@ -45,30 +43,28 @@ class Ipswd < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.319/ipswd_3.1.319_linux_x86_64.tar.gz"
-      sha256 "067c2e494be3d1263f8a79fedebc4477fc9dd9d06e071b854b1d0d680fd4f78d"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.320/ipswd_3.1.320_linux_x86_64.tar.gz"
+      sha256 "ed8d57fdb747075d9caf0a74380a4cd5eeb2f376895bf0d7dcb4c1dcac0ffb28"
 
       def install
         bin.install "ipswd"
-        prefix.install "LICENSE", "README.md"
-        pkgshare.install "config.example.yml" => "ipsw/config.yml"
-        etc.install pkgshare/"ipsw/config.yml" => "ipsw/config.yml"
-        prefix.install_symlink etc/"ipsw/config.yml" => "config.yaml"
+        prefix.install "LICENSE", "README.md", "config.example.yml"
+        (etc/"ipsw").mkpath
+        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
         bash_completion.install "completions/ipswd/_bash" => "ipswd"
         zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.319/ipswd_3.1.319_linux_arm64.tar.gz"
-      sha256 "78cb3399e20a9454ec91a2317d4b7de1d3ce21639ef8f8675db0dc3f8770f1e0"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.320/ipswd_3.1.320_linux_arm64.tar.gz"
+      sha256 "997b8245393522c9ba72f0143e61825cd4736e3209a4c4fd1633f6c28a9054b0"
 
       def install
         bin.install "ipswd"
-        prefix.install "LICENSE", "README.md"
-        pkgshare.install "config.example.yml" => "ipsw/config.yml"
-        etc.install pkgshare/"ipsw/config.yml" => "ipsw/config.yml"
-        prefix.install_symlink etc/"ipsw/config.yml" => "config.yaml"
+        prefix.install "LICENSE", "README.md", "config.example.yml"
+        (etc/"ipsw").mkpath
+        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
         bash_completion.install "completions/ipswd/_bash" => "ipswd"
         zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
@@ -98,8 +94,7 @@ class Ipswd < Formula
   end
 
   service do
-    # run [opt_bin/"ipswd", "start", "--config", etc/"ipsw/config.yml"]
-    run [opt_bin/"ipswd", "start"]
+    run [opt_bin/"ipswd", "start", "--config", etc/"ipsw/config.yml"]
     environment_variables IPSW_IN_HOMEBREW: 1
     keep_alive true
     log_path var/"log/ipswd.log"
