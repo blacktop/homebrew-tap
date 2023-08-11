@@ -9,31 +9,12 @@ class VmProxy < Formula
     bin.install "vm-proxy"
   end
 
-  plist_options :startup => false
-
-  def plist; <<~EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
-"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-  <dict>
-    <key>Label</key>
-    <string>#{plist_name}</string>
-    <key>Program</key>
-    <string>#{bin}/vm-proxy</string>
-    <key>WorkingDirectory</key>
-    <string>#{HOMEBREW_PREFIX}</string>
-    <key>StandardOutPath</key>
-    <string>#{var}/log/vm-proxy/vm-proxy.log</string>
-    <key>StandardErrorPath</key>
-    <string>#{var}/log/vm-proxy/vm-proxy.log</string>
-    <key>RunAtLoad</key>
-    <true/>
-  </dict>
-</plist>
-...
-
-    EOS
+  service do
+    run bin/"vm-proxy"
+    require_root false
+    working_dir HOMEBREW_PREFIX
+    log_path var/"log/vm-proxy/vm-proxy.log"
+    error_log_path var/"log/vm-proxy/vm-proxy.log"
   end
 
   test do
