@@ -5,13 +5,13 @@
 class Lporg < Formula
   desc "Organize Your macOS Launchpad Apps"
   homepage "https://github.com/blacktop/lporg"
-  version "20.4.27"
+  version "20.4.28"
   license "MIT"
   depends_on :macos
 
   on_macos do
-    url "https://github.com/blacktop/lporg/releases/download/v20.4.27/lporg_20.4.27_macOS_universal.tar.gz"
-    sha256 "cd38da60689641205be6f439bb8f27745f1bcbc194747b437232cff324e4a346"
+    url "https://github.com/blacktop/lporg/releases/download/v20.4.28/lporg_20.4.28_macOS_universal.tar.gz"
+    sha256 "b3a239874ebe72f8f4e5b46b5eb5a8a0e60c4bb562011c4f8852ea049f585011"
 
     def install
       bin.install "lporg"
