@@ -1,6 +1,6 @@
 cask "ghidra" do
   version "11.0.0"
-  sha256 "d9ea6ef6a6ec0b783411293a69f68890007fc1d568cb2d2724307004818e7923"
+  sha256 "d004b9c49b0ccec12ebd080129b1d365cea61f92a3ad42479a10d6320a370870"
 
   url "https://github.com/blacktop/ghidra-apple-silicon/releases/download/v11.0/Ghidra_11.0.zip"
   name "Ghidra.app (Apple Silicon)"
