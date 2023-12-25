@@ -1,11 +1,13 @@
-cask "ghidra" do
+cask "ghidra-app" do
   version "11.0.0"
-  sha256 "d004b9c49b0ccec12ebd080129b1d365cea61f92a3ad42479a10d6320a370870"
+  sha256 "774aad276e8a5ebd262e9b1de6a4f544e69257c921a3e686773c475c0491efd6"
 
   url "https://github.com/blacktop/ghidra-apple-silicon/releases/download/v11.0/Ghidra_11.0.zip"
   name "Ghidra.app (Apple Silicon)"
   desc "Software reverse engineering (SRE) suite of tools"
   homepage "https://github.com/blacktop/ghidra-apple-silicon"
+
+  depends_on :arm64
 
   app "Ghidra.app"
 
