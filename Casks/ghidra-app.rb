@@ -9,6 +9,15 @@ cask "ghidra-app" do
 
   app "Ghidra.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                  args:         [
+                    "-d",
+                    "com.apple.quarantine",
+                    "#{appdir}/Ghidra.app",
+                  ]
+  end
+
   zap trash: "~/.ghidra"
 
   caveats do
