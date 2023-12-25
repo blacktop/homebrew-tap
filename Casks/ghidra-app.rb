@@ -7,8 +7,6 @@ cask "ghidra-app" do
   desc "Software reverse engineering (SRE) suite of tools"
   homepage "https://github.com/blacktop/ghidra-apple-silicon"
 
-  depends_on :arm64
-
   app "Ghidra.app"
 
   zap trash: "~/.ghidra"
