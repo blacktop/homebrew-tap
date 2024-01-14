@@ -1,6 +1,6 @@
 cask "ghidra-app" do
   version "11.0.0"
-  sha256 "8efc27e8bd2cb5efd19ca37c25cbee997d94cabb748b9693efeb55576440e53d"
+  sha256 "ff718995a81de5424560b7e9b312faae5e02416cf4d7f3445d2af61f89bbe80c"
 
   url "https://github.com/blacktop/ghidra-app/releases/download/v11.0/Ghidra_11.0.zip",
       verified: "github.com/blacktop/ghidra-app/"
@@ -13,7 +13,7 @@ cask "ghidra-app" do
   postflight do
     system_command "/usr/bin/xattr",
                   args:         [
-                    "-d",
+                    "-dr",
                     "com.apple.quarantine",
                     "#{appdir}/Ghidra.app",
                   ]
