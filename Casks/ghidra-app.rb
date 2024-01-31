@@ -1,8 +1,8 @@
 cask "ghidra-app" do
-  version "11.0.0"
-  sha256 "ff718995a81de5424560b7e9b312faae5e02416cf4d7f3445d2af61f89bbe80c"
+  version "11.0.1"
+  sha256 "31cba3e084097a0f10aa4ddce40d42c243570754320df43c75cee87db2eeca26"
 
-  url "https://github.com/blacktop/ghidra-app/releases/download/v11.0/Ghidra_11.0.zip",
+  url "https://github.com/blacktop/ghidra-app/releases/download/v11.0.1/Ghidra_11.0.1.zip",
       verified: "github.com/blacktop/ghidra-app/"
   name "Ghidra.app"
   desc "Software reverse engineering (SRE) suite of tools"
