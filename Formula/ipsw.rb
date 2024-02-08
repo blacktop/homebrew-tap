@@ -5,7 +5,7 @@
 class Ipsw < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.452"
+  version "3.1.453"
   license "MIT"
 
   depends_on "bat" => :optional
@@ -14,36 +14,34 @@ class Ipsw < Formula
   depends_on "unicorn" => :optional
   depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.452/ipsw_3.1.452_macOS_arm64_extras.tar.gz"
-      sha256 "2962fec9ab9e6fee58d6c3a35a00c747d6690a235b2f2b43903b9783ce5cbe7d"
+  if Hardware::CPU.arm?
+    url "https://github.com/blacktop/ipsw/releases/download/v3.1.453/ipsw_3.1.453_macOS_arm64_extras.tar.gz"
+    sha256 "97b38cfadb38cb49e4dbd7cb140573ebcc4f08a5726a8ffcdf23f3b87a46613d"
 
-      def install
-        bin.install "ipsw"
-        prefix.install "LICENSE", "README.md", "config.example.yml"
-        (etc/"ipsw").mkpath
-        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
-        bash_completion.install "completions/ipsw/_bash" => "ipsw"
-        zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
-        fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
-        man1.install Dir["manpages/*"]
-      end
+    def install
+      bin.install "ipsw"
+      prefix.install "LICENSE", "README.md", "config.example.yml"
+      (etc/"ipsw").mkpath
+      etc.install prefix/"config.example.yml" => "ipsw/config.yml"
+      bash_completion.install "completions/ipsw/_bash" => "ipsw"
+      zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
+      fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
+      man1.install Dir["manpages/*"]
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.452/ipsw_3.1.452_macOS_x86_64_extras.tar.gz"
-      sha256 "626ce4ef34e65f0b3ff390f97ec990bd91f26dc8a17f9b10820cd4be2f95a877"
+  end
+  if Hardware::CPU.intel?
+    url "https://github.com/blacktop/ipsw/releases/download/v3.1.453/ipsw_3.1.453_macOS_x86_64_extras.tar.gz"
+    sha256 "b74886e4d6805e1984f684039f30fdf0b1f3b5f590dbea000784e2871b36d3e4"
 
-      def install
-        bin.install "ipsw"
-        prefix.install "LICENSE", "README.md", "config.example.yml"
-        (etc/"ipsw").mkpath
-        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
-        bash_completion.install "completions/ipsw/_bash" => "ipsw"
-        zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
-        fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
-        man1.install Dir["manpages/*"]
-      end
+    def install
+      bin.install "ipsw"
+      prefix.install "LICENSE", "README.md", "config.example.yml"
+      (etc/"ipsw").mkpath
+      etc.install prefix/"config.example.yml" => "ipsw/config.yml"
+      bash_completion.install "completions/ipsw/_bash" => "ipsw"
+      zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
+      fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
+      man1.install Dir["manpages/*"]
     end
   end
 
