@@ -5,43 +5,41 @@
 class IpswFrida < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.452"
+  version "3.1.453"
   license "MIT"
 
   depends_on "bat" => :optional
   depends_on "libusb" => :optional
   depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.452/ipsw_3.1.452_macOS_x86_64_frida.tar.gz"
-      sha256 "6c41ac63daf8bf92c9c67f38f20d331a5b8392f260c26bdd37955967f5652e93"
+  if Hardware::CPU.intel?
+    url "https://github.com/blacktop/ipsw/releases/download/v3.1.453/ipsw_3.1.453_macOS_x86_64_frida.tar.gz"
+    sha256 "0134c3d02bb2b27371e3a1cd044b1a6a4cc79881c23c90787eea2c43ab1ecc35"
 
-      def install
-        bin.install "ipsw"
-        prefix.install "LICENSE", "README.md", "config.example.yml"
-        (etc/"ipsw").mkpath
-        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
-        bash_completion.install "completions/ipsw/_bash" => "ipsw"
-        zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
-        fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
-        man1.install Dir["manpages/*"]
-      end
+    def install
+      bin.install "ipsw"
+      prefix.install "LICENSE", "README.md", "config.example.yml"
+      (etc/"ipsw").mkpath
+      etc.install prefix/"config.example.yml" => "ipsw/config.yml"
+      bash_completion.install "completions/ipsw/_bash" => "ipsw"
+      zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
+      fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
+      man1.install Dir["manpages/*"]
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.452/ipsw_3.1.452_macOS_arm64_frida.tar.gz"
-      sha256 "8e8dac33839b73fc3153020667d68bf8068dcb46fd7a1fef98cade204f861c1a"
+  end
+  if Hardware::CPU.arm?
+    url "https://github.com/blacktop/ipsw/releases/download/v3.1.453/ipsw_3.1.453_macOS_arm64_frida.tar.gz"
+    sha256 "fbc394758d47c0e54e7b1edcec831b309d78c9b2daf3ddb1b96035c3af071292"
 
-      def install
-        bin.install "ipsw"
-        prefix.install "LICENSE", "README.md", "config.example.yml"
-        (etc/"ipsw").mkpath
-        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
-        bash_completion.install "completions/ipsw/_bash" => "ipsw"
-        zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
-        fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
-        man1.install Dir["manpages/*"]
-      end
+    def install
+      bin.install "ipsw"
+      prefix.install "LICENSE", "README.md", "config.example.yml"
+      (etc/"ipsw").mkpath
+      etc.install prefix/"config.example.yml" => "ipsw/config.yml"
+      bash_completion.install "completions/ipsw/_bash" => "ipsw"
+      zsh_completion.install "completions/ipsw/_zsh" => "_ipsw"
+      fish_completion.install "completions/ipsw/_fish" => "ipsw.fish"
+      man1.install Dir["manpages/*"]
     end
   end
 
