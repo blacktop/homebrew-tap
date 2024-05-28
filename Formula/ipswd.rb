@@ -5,15 +5,15 @@
 class Ipswd < Formula
   desc "ipsw - Daemon"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.480"
+  version "3.1.481"
   license "MIT"
 
   depends_on "libusb" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.480/ipswd_3.1.480_macOS_x86_64.tar.gz"
-      sha256 "780f7a88d82c2dc963358f25e05119f1d4236a9555adddfeb1713d9c05d8fd69"
+    on_intel do
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.481/ipswd_3.1.481_macOS_x86_64.tar.gz"
+      sha256 "027fb61f51a2a77eebd1ec1f99e3c64a919915ae963f65102a04d7789bd4fd07"
 
       def install
         bin.install "ipswd"
@@ -25,9 +25,9 @@ class Ipswd < Formula
         fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.480/ipswd_3.1.480_macOS_arm64.tar.gz"
-      sha256 "69b30552d5dcba1356c6cbd1fba291f4c0b903c37d8b84d61693efc030774c0d"
+    on_arm do
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.481/ipswd_3.1.481_macOS_arm64.tar.gz"
+      sha256 "e44c4b6f27e26ec5a2e4673ea818058a0c4cfb38319d7e9f82460c447f819fe0"
 
       def install
         bin.install "ipswd"
@@ -42,32 +42,36 @@ class Ipswd < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.480/ipswd_3.1.480_linux_x86_64.tar.gz"
-      sha256 "e97e3ce3d85e9fb268b7842e0fb7632abb34c916de3b2d6d000fee0ae87feb67"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/blacktop/ipsw/releases/download/v3.1.481/ipswd_3.1.481_linux_x86_64.tar.gz"
+        sha256 "234ebb34b8b8a4f77a803673c95955e55cefe63280522973cb149a72fa0c1dea"
 
-      def install
-        bin.install "ipswd"
-        prefix.install "LICENSE", "README.md", "config.example.yml"
-        (etc/"ipsw").mkpath
-        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
-        bash_completion.install "completions/ipswd/_bash" => "ipswd"
-        zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
-        fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
+        def install
+          bin.install "ipswd"
+          prefix.install "LICENSE", "README.md", "config.example.yml"
+          (etc/"ipsw").mkpath
+          etc.install prefix/"config.example.yml" => "ipsw/config.yml"
+          bash_completion.install "completions/ipswd/_bash" => "ipswd"
+          zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
+          fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.480/ipswd_3.1.480_linux_arm64.tar.gz"
-      sha256 "a1c6e807701a01f5c8bc6d0bda8c68de7570c54e3cdebffb0751d2ba8ee8c2ea"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/blacktop/ipsw/releases/download/v3.1.481/ipswd_3.1.481_linux_arm64.tar.gz"
+        sha256 "f749e40ee1bef39ba1dcb6bd90641ea9a3bc0978dcf68ab853edd398b3399c2f"
 
-      def install
-        bin.install "ipswd"
-        prefix.install "LICENSE", "README.md", "config.example.yml"
-        (etc/"ipsw").mkpath
-        etc.install prefix/"config.example.yml" => "ipsw/config.yml"
-        bash_completion.install "completions/ipswd/_bash" => "ipswd"
-        zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
-        fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
+        def install
+          bin.install "ipswd"
+          prefix.install "LICENSE", "README.md", "config.example.yml"
+          (etc/"ipsw").mkpath
+          etc.install prefix/"config.example.yml" => "ipsw/config.yml"
+          bash_completion.install "completions/ipswd/_bash" => "ipswd"
+          zsh_completion.install "completions/ipswd/_zsh" => "_ipswd"
+          fish_completion.install "completions/ipswd/_fish" => "ipswd.fish"
+        end
       end
     end
   end
