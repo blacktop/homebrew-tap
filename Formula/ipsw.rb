@@ -16,7 +16,7 @@ class Ipsw < Formula
 
   on_intel do
     url "https://github.com/blacktop/ipsw/releases/download/v3.1.486/ipsw_3.1.486_macOS_x86_64_extras.tar.gz"
-    sha256 "82956c26dc26c9bbdcab05e54a52657ed2fe65d7506854af9f728d0c2333eb8c"
+    sha256 "a88b47ecf79aa1f16aace0df56232c954393b80a69351ec5ccc9f4b084c1e04d"
 
     def install
       bin.install "ipsw"
@@ -31,7 +31,7 @@ class Ipsw < Formula
   end
   on_arm do
     url "https://github.com/blacktop/ipsw/releases/download/v3.1.486/ipsw_3.1.486_macOS_arm64_extras.tar.gz"
-    sha256 "1c8c0a97dff0c2fc41d8c36c0758de584bb167688486da9385b7440b28a1892f"
+    sha256 "8a1778f960b653d25f69873f8761535f7d4f5ee096da9df8d3e21e2a8cca75eb"
 
     def install
       bin.install "ipsw"
