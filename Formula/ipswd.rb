@@ -13,7 +13,7 @@ class Ipswd < Formula
   on_macos do
     on_intel do
       url "https://github.com/blacktop/ipsw/releases/download/v3.1.486/ipswd_3.1.486_macOS_x86_64.tar.gz"
-      sha256 "10ccdc4dd3551fd7725df6d7e1edb1a5df36ef86ab89c43a4e62f2033b2ec774"
+      sha256 "bd56c1d2933e2dd8f33b3825a0c53aeda9021a7614f979180445dff74817de94"
 
       def install
         bin.install "ipswd"
@@ -27,7 +27,7 @@ class Ipswd < Formula
     end
     on_arm do
       url "https://github.com/blacktop/ipsw/releases/download/v3.1.486/ipswd_3.1.486_macOS_arm64.tar.gz"
-      sha256 "1663ed5f5ee6eac28d1967bff499ca89413ef1ec0eee504ddfd7d15793b98130"
+      sha256 "47ed5ab36696f0c1ebf7b36449aa0a31689bc8774382924d3a5c02e1bbf2f0b3"
 
       def install
         bin.install "ipswd"
@@ -45,7 +45,7 @@ class Ipswd < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/blacktop/ipsw/releases/download/v3.1.486/ipswd_3.1.486_linux_x86_64.tar.gz"
-        sha256 "56cf4412091d343308cc6c564070d91c18f1ed465dcd7137143006e404466114"
+        sha256 "2831cc391fa416cf7e7b3fb5068767f9811f4dc0b6d49db510eccdd10c8a52ad"
 
         def install
           bin.install "ipswd"
@@ -61,7 +61,7 @@ class Ipswd < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/blacktop/ipsw/releases/download/v3.1.486/ipswd_3.1.486_linux_arm64.tar.gz"
-        sha256 "c1a7be901f334e963744be83b1c11e817f11590c3c0d9e2b9f213b832fc3b11a"
+        sha256 "54db4c362769f28d252d4f28234456b015b15c070a9c8c81d528da6dba3997a9"
 
         def install
           bin.install "ipswd"
