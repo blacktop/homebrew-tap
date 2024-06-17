@@ -1,6 +1,6 @@
 cask "ghidra-app" do
-  version "11.1"
-  sha256 "d03467194c0ecf113fb6517543444f4fc4592af00016a2bca21ba5f3618f5627"
+  version "11.1.1"
+  sha256 "d84f813385dc48247754115de34745342877b771e1912983a9a59042434384ac"
 
   url "https://github.com/blacktop/ghidra-app/releases/download/v#{version}/Ghidra_#{version}.zip"
   name "Ghidra.app"
