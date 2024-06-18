@@ -5,7 +5,7 @@
 class IpswFrida < Formula
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.498"
+  version "3.1.499"
   license "MIT"
 
   depends_on "bat" => :optional
@@ -13,8 +13,8 @@ class IpswFrida < Formula
   depends_on :macos
 
   on_intel do
-    url "https://github.com/blacktop/ipsw/releases/download/v3.1.498/ipsw_3.1.498_macOS_x86_64_frida.tar.gz"
-    sha256 "f6ad4afe852eef390ecf1fae21e1eb37ef039022c4dd3cd423f84758b0981ca9"
+    url "https://github.com/blacktop/ipsw/releases/download/v3.1.499/ipsw_3.1.499_macOS_x86_64_frida.tar.gz"
+    sha256 "2e20b9da06f8e727bd6322212a96a2c6816dcc210226bf427a53e845ba43630c"
 
     def install
       bin.install "ipsw"
@@ -28,8 +28,8 @@ class IpswFrida < Formula
     end
   end
   on_arm do
-    url "https://github.com/blacktop/ipsw/releases/download/v3.1.498/ipsw_3.1.498_macOS_arm64_frida.tar.gz"
-    sha256 "e2dd7955faaea3ca54a69e4135f723b6092965ad370c0d9f67c3c704dbf5bfcb"
+    url "https://github.com/blacktop/ipsw/releases/download/v3.1.499/ipsw_3.1.499_macOS_arm64_frida.tar.gz"
+    sha256 "e9529feb1fbf80291f385311bac6c3810f37ffd3fcaab86299e677c7845ec624"
 
     def install
       bin.install "ipsw"
