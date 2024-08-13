@@ -1,9 +1,9 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.22.0.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.22.0.src.tar.gz"
-  sha256 "4d196c3d41a0d6c1dfc64d04e3cc1f608b0c436bd87b7060ce3e23234e1f4d5c"
+  url "https://go.dev/dl/go1.23.0.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.23.0.src.tar.gz"
+  sha256 "42b7a8e80d805daa03022ed3fde4321d4c3bf2c990a144165d01eeecd6f699c6"
   license "BSD-3-Clause"
   head "https://go.googlesource.com/go.git", branch: "master"
 
@@ -20,15 +20,6 @@ class Go < Formula
     end
   end
 
-  bottle do
-    sha256 arm64_sonoma:   "b8d6b559eafd615a9e18d8c3c370d5c3e947647c478a3f92003946a989490fd0"
-    sha256 arm64_ventura:  "f6c5823625fb07c4aa2b9a019100e6bea59db721c2cfa98007d406c747d7ed87"
-    sha256 arm64_monterey: "822a2a9d7061d0c816a8b25feebc108d440d9c21d4af9cda020f339719f2ad90"
-    sha256 sonoma:         "beabe176fb5e5df9ffb0bc30bf0136545bdad4ff48ad1f3583c54ec5a7202f7d"
-    sha256 ventura:        "f513dbb8bcf9db00e0e30e97a31aa73a163eacaf71a25bbdf948923017a52128"
-    sha256 monterey:       "c410ff76a352372e822d0f964e6c4a4624b25cb81f21c766294bb891185940d2"
-    sha256 x86_64_linux:   "5554151f6201b49bec03fc408e5912b5919bdbe731c890ca06ac0189c248dc62"
-  end
 
   # Don't update this unless this version cannot bootstrap the new version.
   resource "gobootstrap" do
@@ -73,7 +64,7 @@ class Go < Formula
       with_env(CC: "cc", CXX: "c++") { system "./make.bash" }
     end
 
-    rm_rf "gobootstrap" # Bootstrap not required beyond compile.
+    rm_r("gobootstrap") # Bootstrap not required beyond compile.
     libexec.install Dir["*"]
     bin.install_symlink Dir[libexec/"bin/go*"]
 
@@ -81,9 +72,9 @@ class Go < Formula
 
     # Remove useless files.
     # Breaks patchelf because folder contains weird debug/test files
-    (libexec/"src/debug/elf/testdata").rmtree
+    rm_r(libexec/"src/debug/elf/testdata")
     # Binaries built for an incompatible architecture
-    (libexec/"src/runtime/pprof/testdata").rmtree
+    rm_r(libexec/"src/runtime/pprof/testdata")
   end
 
   test do
