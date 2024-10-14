@@ -40,15 +40,12 @@ class FridaTools < Formula
     sha256 "a3b3366087c1bc0a2795111edcadddb8b3b59509d5db5d7ea3fdd69f954a8878"
   end
 
-  def python3
-    which("python3.13")
-  end
-
   def install
     # virtualenv_install_with_resources
     # pkgshare.install buildpath/"examples"
-    venv = virtualenv_create(libexec, python3)
-    venv.pip_install_and_link buildpath
+    # venv = virtualenv_create(libexec)
+    # venv.pip_install_and_link buildpath
+    system "python3.13", "-m", "pip", "install", *std_pip_args(build_isolation: true), "./source/python"
   end
 
   test do
