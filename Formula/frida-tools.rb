@@ -20,10 +20,10 @@ class FridaTools < Formula
   #   sha256 "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
   # end
 
-  resource "frida" do
-    url "https://files.pythonhosted.org/packages/2b/b5/7f32692b66a69bf255b1d6cc6c04e1b4b1f40d6060d58e94f813acd88a3b/frida-16.5.6.tar.gz"
-    sha256 "87b5c2df71d5599358247f2666ddc051c9f18c14366470dcb19e98683b3d69a6"
-  end
+  # resource "frida" do
+  #   url "https://files.pythonhosted.org/packages/2b/b5/7f32692b66a69bf255b1d6cc6c04e1b4b1f40d6060d58e94f813acd88a3b/frida-16.5.6.tar.gz"
+  #   sha256 "87b5c2df71d5599358247f2666ddc051c9f18c14366470dcb19e98683b3d69a6"
+  # end
 
   # resource "prompt_toolkit" do
   #   url "https://files.pythonhosted.org/packages/2d/4f/feb5e137aff82f7c7f3248267b97451da3644f6cdc218edfe549fb354127/prompt_toolkit-3.0.48.tar.gz"
@@ -43,9 +43,9 @@ class FridaTools < Formula
   def install
     # virtualenv_install_with_resources
      venv = virtualenv_create(libexec, "python3.13")
-     resources.each do |r|
-      venv.pip_install_and_link r
-     end
+    #  resources.each do |r|
+    #   venv.pip_install_and_link r
+    #  end
      venv.pip_install_and_link buildpath
   end
 
