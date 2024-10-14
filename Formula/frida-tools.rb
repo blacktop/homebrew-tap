@@ -44,8 +44,9 @@ class FridaTools < Formula
     # virtualenv_install_with_resources
      venv = virtualenv_create(libexec, "python3.13")
      resources.each do |r|
-      venv.pip_install r
+      venv.pip_install_and_link r
      end
+     venv.pip_install_and_link buildpath
   end
 
   test do
