@@ -3,8 +3,8 @@ class FridaTools < Formula
 
   desc "CLI tools for Frida"
   homepage "https://www.frida.re/"
-  url "https://files.pythonhosted.org/packages/ab/42/7823de1787e4c13c88c5de4caaf315365687d5425c9b484df2917bb6ca75/frida-tools-12.3.0.tar.gz"
-  sha256 "8edc67d1ae3792ff5b2dc63508cde4d247f92b7d0d7bf153d74a21a6d58dc045"
+  url "https://files.pythonhosted.org/packages/94/71/2ab3e4f334ed929e35526a1d4f39d383807fc01c85d1bca6dcf9a41665aa/frida-tools-13.3.0.tar.gz"
+  sha256 "1fdccdf29758a82fda94fe8087e66e5f4ad99f8715b93316d27059e3f873e239"
   license "MIT"
   revision 3
 
@@ -13,7 +13,7 @@ class FridaTools < Formula
     regex(%r{href=.*?/packages.*?/frida[._-]v?(\d+(?:\.\d+)*(?:[a-z]\d+)?)\.t}i)
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.13"
 
   resource "colorama" do
     url "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
@@ -21,28 +21,23 @@ class FridaTools < Formula
   end
 
   resource "frida" do
-    url "https://files.pythonhosted.org/packages/9f/25/811fe2bd92dfb6c6208a6fb18645b748d3645571f4d3f314c4de8a19dda4/frida-16.1.4.tar.gz"
-    sha256 "b2d3a22f8422cd9379ee2a3ca870e50cdb1706cfa48be9587bf835d63e51e582"
+    url "https://files.pythonhosted.org/packages/2b/b5/7f32692b66a69bf255b1d6cc6c04e1b4b1f40d6060d58e94f813acd88a3b/frida-16.5.6.tar.gz"
+    sha256 "87b5c2df71d5599358247f2666ddc051c9f18c14366470dcb19e98683b3d69a6"
   end
 
   resource "prompt_toolkit" do
-    url "https://files.pythonhosted.org/packages/9a/02/76cadde6135986dc1e82e2928f35ebeb5a1af805e2527fe466285593a2ba/prompt_toolkit-3.0.39.tar.gz"
-    sha256 "04505ade687dc26dc4284b1ad19a83be2f2afe83e7a828ace0c72f3a1df72aac"
+    url "https://files.pythonhosted.org/packages/2d/4f/feb5e137aff82f7c7f3248267b97451da3644f6cdc218edfe549fb354127/prompt_toolkit-3.0.48.tar.gz"
+    sha256 "d6623ab0477a80df74e646bdbc93621143f5caf104206aa29294d53de1a03d90"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/d6/f7/4d461ddf9c2bcd6a4d7b2b139267ca32a69439387cc1f02a924ff8883825/Pygments-2.16.1.tar.gz"
-    sha256 "1daff0494820c69bc8941e407aa20f577374ee88364ee10a98fdbe0aece96e29"
+    url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
+    sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
   end
 
-  resource "six" do
-    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
-    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
-  end
-
-  resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/a6/ad/428bc4ff924e66365c96994873e09a17bb5e8a1228be6e8d185bc2a11de9/wcwidth-0.2.9.tar.gz"
-    sha256 "a675d1a4a2d24ef67096a04b85b02deeecd8e226f57b5e3a72dbb9ed99d27da8"
+  resource "websockets" do
+    url "https://files.pythonhosted.org/packages/e2/73/9223dbc7be3dcaf2a7bbf756c351ec8da04b1fa573edaf545b95f6b0c7fd/websockets-13.1.tar.gz"
+    sha256 "a3b3366087c1bc0a2795111edcadddb8b3b59509d5db5d7ea3fdd69f954a8878"
   end
 
   def install
