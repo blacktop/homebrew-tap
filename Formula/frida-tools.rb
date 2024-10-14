@@ -45,7 +45,7 @@ class FridaTools < Formula
     # pkgshare.install buildpath/"examples"
     # venv = virtualenv_create(libexec)
     # venv.pip_install_and_link buildpath
-    system "python3.13", "-m", "pip3", "install", *std_pip_args(build_isolation: true), "-e" "."
+    system "python3.13", "-m", "pip", "install", *std_pip_args(build_isolation: true), "-e" "."
   end
 
   test do
