@@ -45,7 +45,7 @@ class FridaTools < Formula
     # pkgshare.install buildpath/"examples"
     # venv = virtualenv_create(libexec)
     # venv.pip_install_and_link buildpath
-    system Formula["python@3.3"].opt_bin/"python3.3", *Language::Python.setup_install_args(libexec)
+    system Formula["python@3.13"].opt_bin/"python3.13", *Language::Python.setup_install_args(libexec)
   end
 
   test do
