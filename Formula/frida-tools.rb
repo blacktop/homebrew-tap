@@ -42,7 +42,7 @@ class FridaTools < Formula
 
   def install
     # virtualenv_install_with_resources
-    venv = virtualenv_create(libexec, "python3.13", system_site_packages: false, without_pip: false)
+    venv = virtualenv_create(libexec, "python3.13", system_site_packages: false)
     venv.pip_install resources
   end
 
