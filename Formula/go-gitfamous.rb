@@ -5,21 +5,21 @@
 class GoGitfamous < Formula
   desc "Github Event Tracker TUI"
   homepage "https://github.com/blacktop/go-gitfamous"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/blacktop/go-gitfamous/releases/download/v0.1.5/go-gitfamous_0.1.5_macOS_x86_64.tar.gz"
-      sha256 "5a1c878b676b3ddd765a6e8e9f4f5db7dfd1012708035fd9f5b8894671922eb9"
+      url "https://github.com/blacktop/go-gitfamous/releases/download/v0.1.6/go-gitfamous_0.1.6_macOS_x86_64.tar.gz"
+      sha256 "22191e906b78227d1edad3b6037928eab825488a843d0e786324c755c445dab1"
 
       def install
         bin.install "gitfamous"
       end
     end
     on_arm do
-      url "https://github.com/blacktop/go-gitfamous/releases/download/v0.1.5/go-gitfamous_0.1.5_macOS_arm64.tar.gz"
-      sha256 "375b78e2a8002f3f13a7d5f512b8dbc1e905da2c0a0a67ef2fae6637c55e4e77"
+      url "https://github.com/blacktop/go-gitfamous/releases/download/v0.1.6/go-gitfamous_0.1.6_macOS_arm64.tar.gz"
+      sha256 "fcca24ee000218b094f55078ea6c7f93d0bfa754cf29d26b951c0debfbe61bb9"
 
       def install
         bin.install "gitfamous"
@@ -30,8 +30,8 @@ class GoGitfamous < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/go-gitfamous/releases/download/v0.1.5/go-gitfamous_0.1.5_linux_x86_64.tar.gz"
-        sha256 "bd294a9c115346127f8a19802f39f1966bdd1c0f0bf6b8dcc7e54b577a7ca590"
+        url "https://github.com/blacktop/go-gitfamous/releases/download/v0.1.6/go-gitfamous_0.1.6_linux_x86_64.tar.gz"
+        sha256 "1eba3cac65bd93d41ae4d9dc1d7699e85b50fd81f86d9de9d2c5d44b9c77fb52"
 
         def install
           bin.install "gitfamous"
@@ -40,8 +40,8 @@ class GoGitfamous < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/go-gitfamous/releases/download/v0.1.5/go-gitfamous_0.1.5_linux_arm64.tar.gz"
-        sha256 "ba0a34d6718798161326667e9929948813dcea5fc1b69769b7d7758999220225"
+        url "https://github.com/blacktop/go-gitfamous/releases/download/v0.1.6/go-gitfamous_0.1.6_linux_arm64.tar.gz"
+        sha256 "9581f1e04f74f7801ce294499b97fa9233b633feaecc4353df5f77c640bc0d09"
 
         def install
           bin.install "gitfamous"
