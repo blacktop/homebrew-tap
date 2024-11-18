@@ -5,21 +5,21 @@
 class Fluxy < Formula
   desc "FLUX image generator TUI"
   homepage "https://github.com/blacktop/fluxy"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/blacktop/fluxy/releases/download/v0.1.7/fluxy_0.1.7_macOS_x86_64.tar.gz"
-      sha256 "a98c9258829035b164985cdb6eb8e922fc820f1c8281cb41343cc0fe01f7ae44"
+      url "https://github.com/blacktop/fluxy/releases/download/v0.1.8/fluxy_0.1.8_macOS_x86_64.tar.gz"
+      sha256 "1582683527e5e005aea387103ee05f590b46044a45fac01eb2b083595be9ae17"
 
       def install
         bin.install "fluxy"
       end
     end
     on_arm do
-      url "https://github.com/blacktop/fluxy/releases/download/v0.1.7/fluxy_0.1.7_macOS_arm64.tar.gz"
-      sha256 "c4484cd9d03b0c6566f30ec334a8eb6add9ad61cc880c7d8c7e9f013ffe11e2a"
+      url "https://github.com/blacktop/fluxy/releases/download/v0.1.8/fluxy_0.1.8_macOS_arm64.tar.gz"
+      sha256 "4b8e0bf1a841570d124246d50c496e14ff509f7db8210f5357690a7ea205779d"
 
       def install
         bin.install "fluxy"
@@ -30,8 +30,8 @@ class Fluxy < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/fluxy/releases/download/v0.1.7/fluxy_0.1.7_linux_x86_64.tar.gz"
-        sha256 "5b170f60e9fe5266b8861c1728d3c76362030b2bb0947c4809a962f2dfd38715"
+        url "https://github.com/blacktop/fluxy/releases/download/v0.1.8/fluxy_0.1.8_linux_x86_64.tar.gz"
+        sha256 "9c325bac62381d0304ab4c626e102124c520d757421b9bc23d5a1589c1cb4f1b"
 
         def install
           bin.install "fluxy"
@@ -40,8 +40,8 @@ class Fluxy < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/fluxy/releases/download/v0.1.7/fluxy_0.1.7_linux_arm64.tar.gz"
-        sha256 "fc73f73d282abec8592fe7dfb22bf7c384948c51e3affe79ad3fdc23f7d96f9b"
+        url "https://github.com/blacktop/fluxy/releases/download/v0.1.8/fluxy_0.1.8_linux_arm64.tar.gz"
+        sha256 "a3ac3a5fc772ce1cf94a2e77cf7616eab3b0dc5e1cc88c2a5b4d59658f93959f"
 
         def install
           bin.install "fluxy"
