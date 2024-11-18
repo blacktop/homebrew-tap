@@ -5,21 +5,21 @@
 class BottleBomb < Formula
   desc "Homebrew Bottle Downloader"
   homepage "https://github.com/blacktop/bottle-bomb"
-  version "1.0.12"
+  version "1.0.13"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/blacktop/bottle-bomb/releases/download/v1.0.12/bottle-bomb_1.0.12_macOS_x86_64.tar.gz"
-      sha256 "473e82e5b9532c1d2a663b88202fb886c5f811b8973dcb4cd4f52be51f81954c"
+      url "https://github.com/blacktop/bottle-bomb/releases/download/v1.0.13/bottle-bomb_1.0.13_macOS_x86_64.tar.gz"
+      sha256 "4bdc7054701ba15a48074816d6e7f761c7a4f11a00b742f8827e0c5f19ec6ff7"
 
       def install
         bin.install "bb"
       end
     end
     on_arm do
-      url "https://github.com/blacktop/bottle-bomb/releases/download/v1.0.12/bottle-bomb_1.0.12_macOS_arm64.tar.gz"
-      sha256 "0d9e386704f7368ef5563d888ac5c7d7983f848d382453b99f0d76659f9e3edf"
+      url "https://github.com/blacktop/bottle-bomb/releases/download/v1.0.13/bottle-bomb_1.0.13_macOS_arm64.tar.gz"
+      sha256 "f12ead3d53a9578add7b3abbf873bef76275c46291026c57f13951e094b8bf60"
 
       def install
         bin.install "bb"
@@ -30,8 +30,8 @@ class BottleBomb < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/bottle-bomb/releases/download/v1.0.12/bottle-bomb_1.0.12_linux_x86_64.tar.gz"
-        sha256 "06084a37a8d2ad9ca7bee7b3b2329b8266ccd357a500b912e529d53f25c90960"
+        url "https://github.com/blacktop/bottle-bomb/releases/download/v1.0.13/bottle-bomb_1.0.13_linux_x86_64.tar.gz"
+        sha256 "10cffa667ca5c06329dd1599f8e5056dd05132ea5298e17255889adc1a55f384"
 
         def install
           bin.install "bb"
@@ -40,8 +40,8 @@ class BottleBomb < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/bottle-bomb/releases/download/v1.0.12/bottle-bomb_1.0.12_linux_arm64.tar.gz"
-        sha256 "ad8110699fa2721fe8254293e05c13cefc2a262d121a1625740d0c1f7b4c24a3"
+        url "https://github.com/blacktop/bottle-bomb/releases/download/v1.0.13/bottle-bomb_1.0.13_linux_arm64.tar.gz"
+        sha256 "016f884d04381eaa6548f9f3304bd03ddfe2b377dc0970692b94288dbc09c8da"
 
         def install
           bin.install "bb"
