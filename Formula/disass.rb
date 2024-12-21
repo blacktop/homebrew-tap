@@ -11,7 +11,7 @@ class Disass < Formula
   depends_on :macos
 
   url "https://github.com/blacktop/arm64-cgo/releases/download/v1.0.58/disass_1.0.58_darwin_all.tar.gz"
-  sha256 "0894596f7058f6c4c55a09c2fe1ceecb65a51275eb9ee2d75af4d7986961fb23"
+  sha256 "646fc2f9b49f48237eb9288ecc4aa5192bc30f619f872dd2155322b7a482e6e9"
 
   def install
     bin.install "disass"
