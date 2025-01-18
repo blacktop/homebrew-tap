@@ -9,8 +9,8 @@ class BindiffRs < Formula
   license "MIT"
 
   on_macos do
-    url "https://github.com/blacktop/bindiff-rs/releases/download/v0.1.1/bindiff-rs_Darwin_all.tar.gz"
-    sha256 "55c6b5660c852a683978b31661a3df75433f5637c06549debbba53de2552dcd4"
+    url "https://github.com/blacktop/bindiff-rs/releases/download/v0.1.1/bindiff-rs_0.1.1_macOS_universal.tar.gz"
+    sha256 "f970373dc44185f2d071957b34a86b9744e332d7f7e897f3d483c17b96b88f1b"
 
     def install
       bin.install "bindiff-rs"
@@ -20,8 +20,8 @@ class BindiffRs < Formula
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/bindiff-rs/releases/download/v0.1.1/bindiff-rs_Linux_arm64.tar.gz"
-        sha256 "ff041e06265621422dc574f3d08ffdaaf9475048e6eeec40057b989daf480ee6"
+        url "https://github.com/blacktop/bindiff-rs/releases/download/v0.1.1/bindiff-rs_0.1.1_linux_arm64.tar.gz"
+        sha256 "1a3e308f9ce6b753fcb15260027f5f27ab6e1405b05efd2ca60c738febbb5b85"
 
         def install
           bin.install "bindiff-rs"
