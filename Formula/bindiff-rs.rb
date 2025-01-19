@@ -5,12 +5,12 @@
 class BindiffRs < Formula
   desc "Rust bindiff wrapper"
   homepage "https://github.com/blacktop/bindiff-rs"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
-    url "https://github.com/blacktop/bindiff-rs/releases/download/v0.1.5/bindiff-rs_0.1.5_macOS_universal.tar.gz"
-    sha256 "048fe8c44c3eb5bd36cf0c11886d9209cc2fdbef109d1c1ba56485aba674df4b"
+    url "https://github.com/blacktop/bindiff-rs/releases/download/v0.1.6/bindiff-rs_0.1.6_macOS_universal.tar.gz"
+    sha256 "91c0c6d64829363b315a0068fee434f5e7240993487d2eae474020bc51e5d2e0"
 
     def install
       bin.install "bindiff-rs"
@@ -20,8 +20,8 @@ class BindiffRs < Formula
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/bindiff-rs/releases/download/v0.1.5/bindiff-rs_0.1.5_linux_arm64.tar.gz"
-        sha256 "caefcc2468b3c753b9021c28745d73f14529e482a721263a685abd58b8f012c1"
+        url "https://github.com/blacktop/bindiff-rs/releases/download/v0.1.6/bindiff-rs_0.1.6_linux_arm64.tar.gz"
+        sha256 "187f1d2f11bdecc0ae30cbc5693c4b71fc0a6e30d7deb0e44813f99084cb18c2"
 
         def install
           bin.install "bindiff-rs"
