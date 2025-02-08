@@ -5,19 +5,17 @@
 class Apfs < Formula
   desc "APFS parser written in pure Go"
   homepage "https://github.com/blacktop/go-apfs"
-  version "1.0.18"
+  version "1.0.19"
   depends_on :macos
 
-  on_macos do
-    url "https://github.com/blacktop/go-apfs/releases/download/v1.0.18/apfs_1.0.18_macOS_universal.tar.gz"
-    sha256 "cebc57b2b0dc549201267257d6fc851a6f18fcc945c26c494cac8968a2b26938"
+  url "https://github.com/blacktop/go-apfs/releases/download/v1.0.19/go-apfs_1.0.19_macOS_universal.tar.gz"
+  sha256 "df7b1657a4a42ecf7e9e67d9872d7b80c3bd30300988132142204f8d687fba7d"
 
-    def install
-      bin.install "apfs"
-      bash_completion.install "completions/_bash" => "apfs"
-      zsh_completion.install "completions/_zsh" => "_apfs"
-      fish_completion.install "completions/_fish" => "apfs.fish"
-    end
+  def install
+    bin.install "apfs"
+    bash_completion.install "completions/_bash" => "apfs"
+    zsh_completion.install "completions/_zsh" => "_apfs"
+    fish_completion.install "completions/_fish" => "apfs.fish"
   end
 
   test do
