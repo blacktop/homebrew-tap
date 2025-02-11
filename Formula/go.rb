@@ -1,9 +1,9 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.23.0.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.23.0.src.tar.gz"
-  sha256 "42b7a8e80d805daa03022ed3fde4321d4c3bf2c990a144165d01eeecd6f699c6"
+  url "https://go.dev/dl/go1.24.0.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.24.0.src.tar.gz"
+  sha256 "d14120614acb29d12bcab72bd689f257eb4be9e0b6f88a8fb7e41ac65f8556e5"
   license "BSD-3-Clause"
   head "https://go.googlesource.com/go.git", branch: "master"
 
@@ -24,13 +24,13 @@ class Go < Formula
   # Don't update this unless this version cannot bootstrap the new version.
   resource "gobootstrap" do
     checksums = {
-      "darwin-arm64" => "6da3f76164b215053daf730a9b8f1d673dbbaa4c61031374a6744b75cb728641",
-      "darwin-amd64" => "754363489e2244e72cb49b4ec6ddfd6a2c60b0700f8c4876e11befb1913b11c5",
-      "linux-arm64"  => "2096507509a98782850d1f0669786c09727053e9fe3c92b03c0d96f48700282b",
-      "linux-amd64"  => "ff445e48af27f93f66bd949ae060d97991c83e11289009d311f25426258f9c44",
+      "darwin-arm64" => "416c35218edb9d20990b5d8fc87be655d8b39926f15524ea35c66ee70273050d",
+      "darwin-amd64" => "e7bbe07e96f0bd3df04225090fe1e7852ed33af37c43a23e16edbbb3b90a5b7c",
+      "linux-arm64"  => "fd017e647ec28525e86ae8203236e0653242722a7436929b1f775744e26278e7",
+      "linux-amd64"  => "4fa4f869b0f7fc6bb1eb2660e74657fbf04cdd290b5aef905585c86051b34d43",
     }
 
-    version "1.20.14"
+    version "1.22.12"
 
     on_arm do
       on_macos do
@@ -78,7 +78,7 @@ class Go < Formula
   end
 
   test do
-    (testpath/"hello.go").write <<~EOS
+    (testpath/"hello.go").write <<~GO
       package main
 
       import "fmt"
@@ -86,7 +86,7 @@ class Go < Formula
       func main() {
           fmt.Println("Hello World")
       }
-    EOS
+    GO
 
     # Run go fmt check for no errors then run the program.
     # This is a a bare minimum of go working as it uses fmt, build, and run.
@@ -97,7 +97,7 @@ class Go < Formula
       system bin/"go", "build", "hello.go"
     end
 
-    (testpath/"hello_cgo.go").write <<~EOS
+    (testpath/"hello_cgo.go").write <<~GO
       package main
 
       /*
@@ -110,7 +110,7 @@ class Go < Formula
       func main() {
           C.hello()
       }
-    EOS
+    GO
 
     # Try running a sample using cgo without CC or CXX set to ensure that the
     # toolchain's default choice of compilers work
