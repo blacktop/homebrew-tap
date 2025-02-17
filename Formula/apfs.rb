@@ -5,11 +5,11 @@
 class Apfs < Formula
   desc "APFS parser written in pure Go"
   homepage "https://github.com/blacktop/go-apfs"
-  version "1.0.24"
+  version "1.0.25"
 
   on_macos do
-    url "https://github.com/blacktop/go-apfs/releases/download/v1.0.24/go-apfs_1.0.24_macOS_universal.tar.gz"
-    sha256 "1876d86756b4bedf7f2a64226e6e9410523e341bdc5c0537acc49602c1de252c"
+    url "https://github.com/blacktop/go-apfs/releases/download/v1.0.25/go-apfs_1.0.25_macOS_universal.tar.gz"
+    sha256 "17a753efd1971aea1fc85350c30a3bf8d075b64a6de0364f186e3c5f616da211"
 
     def install
       bin.install "apfs"
@@ -22,8 +22,8 @@ class Apfs < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/go-apfs/releases/download/v1.0.24/go-apfs_1.0.24_linux_x86_64.tar.gz"
-        sha256 "f7f209287994b5331f391de2646f77589f9d589f17a40afc5deb26eb0d4a503b"
+        url "https://github.com/blacktop/go-apfs/releases/download/v1.0.25/go-apfs_1.0.25_linux_x86_64.tar.gz"
+        sha256 "80d84ec7286092db87e929d4d426bdd52b20e1c2d69a2138d4336f02b554d678"
 
         def install
           bin.install "apfs"
@@ -35,8 +35,8 @@ class Apfs < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/go-apfs/releases/download/v1.0.24/go-apfs_1.0.24_linux_arm64.tar.gz"
-        sha256 "0387574159307ceff0e49cb7e6b2034b6f66e404c8d184ebaa458906fa330797"
+        url "https://github.com/blacktop/go-apfs/releases/download/v1.0.25/go-apfs_1.0.25_linux_arm64.tar.gz"
+        sha256 "a34baa614a60b3fa5d3fe8fa22a0226232c7b9bf9e9985188d63c3b0de1f7db8"
 
         def install
           bin.install "apfs"
