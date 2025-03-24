@@ -5,13 +5,13 @@
 class McpSay < Formula
   desc "mcp-say"
   homepage "https://github.com/blacktop/mcp-say"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/blacktop/mcp-say/releases/download/v0.1.7/mcp-say_0.1.7_macOS_x86_64.tar.gz"
-    sha256 "bf7d6cbcaced33e6acf6beb5fbf4d615146de25f1ea37798af1282bbf7f276d8"
+    url "https://github.com/blacktop/mcp-say/releases/download/v0.1.8/mcp-say_0.1.8_macOS_x86_64.tar.gz"
+    sha256 "39e488f9fcfb2e9fd3da202eb41778c277113fcd1bff9812bd7bb26f867967cc"
 
     def install
       bin.install "mcp-say"
@@ -21,8 +21,8 @@ class McpSay < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/blacktop/mcp-say/releases/download/v0.1.7/mcp-say_0.1.7_macOS_arm64.tar.gz"
-    sha256 "a1b3d4091be0ba6cebd49f7742568aa1d6bbf88af52ae5fc1cca7b285551d045"
+    url "https://github.com/blacktop/mcp-say/releases/download/v0.1.8/mcp-say_0.1.8_macOS_arm64.tar.gz"
+    sha256 "2e519691d9587b25f5d8912daae06a748e418e482961f78704d4055bcfb1fd1d"
 
     def install
       bin.install "mcp-say"
