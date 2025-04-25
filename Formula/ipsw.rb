@@ -8,9 +8,9 @@ class Ipsw < Formula
   version "3.1.595"
   license "MIT"
 
+  depends_on "libheif"
   depends_on "bat" => :optional
   depends_on "git-delta" => :optional
-  depends_on "libheif" => :optional
   depends_on "libusb" => :optional
   depends_on "unicorn" => :optional
   depends_on :macos
