@@ -5,13 +5,13 @@
 class 8sleep < Formula
   desc "Control 8sleep via CLI"
   homepage "https://github.com/blacktop/8sleep"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/8sleep/releases/download/v0.1.1/8sleep_0.1.1_macOS_x86_64.tar.gz"
-      sha256 "f8cc856a702bd819f6a98fe63e0f45e0241f4b59a29e5846b3c8882bcc317625"
+      url "https://github.com/blacktop/8sleep/releases/download/v0.1.2/8sleep_0.1.2_macOS_x86_64.tar.gz"
+      sha256 "e77d72d99c611882da21bf2912fbba3a865b2a6847bc7fff86c06d72410d5335"
 
       def install
         bin.install "8sleep"
@@ -21,8 +21,8 @@ class 8sleep < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/8sleep/releases/download/v0.1.1/8sleep_0.1.1_macOS_arm64.tar.gz"
-      sha256 "1251b5dad5406ad369d2748d467f2e3b9b38c4e500eb272c5840d392e09afa70"
+      url "https://github.com/blacktop/8sleep/releases/download/v0.1.2/8sleep_0.1.2_macOS_arm64.tar.gz"
+      sha256 "a9b94e4ce16423b884fcda556cec12a53eb91ddaf436b6ea1b69b6bfaf7f0d9d"
 
       def install
         bin.install "8sleep"
@@ -35,8 +35,8 @@ class 8sleep < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/8sleep/releases/download/v0.1.1/8sleep_0.1.1_linux_x86_64.tar.gz"
-      sha256 "7b5f76d2bb2a85f0a6312451fcd958e3c2b9b688dcc8eb54998d8ff49a92c12d"
+      url "https://github.com/blacktop/8sleep/releases/download/v0.1.2/8sleep_0.1.2_linux_x86_64.tar.gz"
+      sha256 "bd95671666913db2f345fa6baa51a3e0fb115b46cc79dd24b84d1ae1f391a267"
       def install
         bin.install "8sleep"
         bash_completion.install "completions/_bash" => "8sleep"
@@ -45,8 +45,8 @@ class 8sleep < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/8sleep/releases/download/v0.1.1/8sleep_0.1.1_linux_arm64.tar.gz"
-      sha256 "8db3fb98a1d087c300646958c731dfedab625d85fed84a6ddcfb4b5b401e86fb"
+      url "https://github.com/blacktop/8sleep/releases/download/v0.1.2/8sleep_0.1.2_linux_arm64.tar.gz"
+      sha256 "79702be8d54012a2a1e5a590b78e2b86426f7d139458dfe7475fba0364841b3f"
       def install
         bin.install "8sleep"
         bash_completion.install "completions/_bash" => "8sleep"
