@@ -5,13 +5,13 @@
 class Clim8 < Formula
   desc "Control Eight Sleep via CLI"
   homepage "https://github.com/blacktop/clim8"
-  version "0.1.8"
+  version "0.1.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/clim8/releases/download/v0.1.8/clim8_0.1.8_macOS_x86_64.tar.gz"
-      sha256 "b0537c1e2fdae093ba9628c660304cdf7088f3262be0e9f596b2baacce37c8d3"
+      url "https://github.com/blacktop/clim8/releases/download/v0.1.9/clim8_0.1.9_macOS_x86_64.tar.gz"
+      sha256 "ef088aca73ea01ab10f1da5397a43cd8ddb7a8bedb6987effd4fbc192ac8b53e"
 
       def install
         bin.install "clim8"
@@ -21,8 +21,8 @@ class Clim8 < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/clim8/releases/download/v0.1.8/clim8_0.1.8_macOS_arm64.tar.gz"
-      sha256 "48b0148d37033fe7a17978d79e8246cfbb4a8b4b2f8ee2013b8399b20dcf465a"
+      url "https://github.com/blacktop/clim8/releases/download/v0.1.9/clim8_0.1.9_macOS_arm64.tar.gz"
+      sha256 "0083b768e84139e56d586d611d92bc728c62a35bb5c0d1a1c536713d2b03d998"
 
       def install
         bin.install "clim8"
@@ -35,8 +35,8 @@ class Clim8 < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/clim8/releases/download/v0.1.8/clim8_0.1.8_linux_x86_64.tar.gz"
-      sha256 "3dbdcce012722db0580240f73737ad39cf448b3f637e73d6bf84ddc3fa7be1c0"
+      url "https://github.com/blacktop/clim8/releases/download/v0.1.9/clim8_0.1.9_linux_x86_64.tar.gz"
+      sha256 "564be3b49a9a4b09baf0b8fffa3d2949b56fa8163878d96ffa601868345c7abf"
       def install
         bin.install "clim8"
         bash_completion.install "completions/_bash" => "clim8"
@@ -45,8 +45,8 @@ class Clim8 < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/clim8/releases/download/v0.1.8/clim8_0.1.8_linux_arm64.tar.gz"
-      sha256 "929a779516ea0c92b5c106d381f541344ae65d63971103cbfcffa34cf34ef172"
+      url "https://github.com/blacktop/clim8/releases/download/v0.1.9/clim8_0.1.9_linux_arm64.tar.gz"
+      sha256 "d5a91fe41c97a08f6295b40e007b9c4e939e7533ebbd7d0ff326d47d92c5d8a1"
       def install
         bin.install "clim8"
         bash_completion.install "completions/_bash" => "clim8"
