@@ -5,13 +5,13 @@
 class Clim8 < Formula
   desc "Control Eight Sleep via CLI"
   homepage "https://github.com/blacktop/clim8"
-  version "0.1.9"
+  version "0.1.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/clim8/releases/download/v0.1.9/clim8_0.1.9_macOS_x86_64.tar.gz"
-      sha256 "ef088aca73ea01ab10f1da5397a43cd8ddb7a8bedb6987effd4fbc192ac8b53e"
+      url "https://github.com/blacktop/clim8/releases/download/v0.1.10/clim8_0.1.10_macOS_x86_64.tar.gz"
+      sha256 "666280cf690db84f46d4a1632b99e8d2c77bf20e4b48abe069ac20d0f03b0742"
 
       def install
         bin.install "clim8"
@@ -21,8 +21,8 @@ class Clim8 < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/clim8/releases/download/v0.1.9/clim8_0.1.9_macOS_arm64.tar.gz"
-      sha256 "0083b768e84139e56d586d611d92bc728c62a35bb5c0d1a1c536713d2b03d998"
+      url "https://github.com/blacktop/clim8/releases/download/v0.1.10/clim8_0.1.10_macOS_arm64.tar.gz"
+      sha256 "f693b3c4ef9d6ce14c4294c2e4c4e1be7720b056b57fdf3a292d1483d3b53eda"
 
       def install
         bin.install "clim8"
@@ -35,8 +35,8 @@ class Clim8 < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/clim8/releases/download/v0.1.9/clim8_0.1.9_linux_x86_64.tar.gz"
-      sha256 "564be3b49a9a4b09baf0b8fffa3d2949b56fa8163878d96ffa601868345c7abf"
+      url "https://github.com/blacktop/clim8/releases/download/v0.1.10/clim8_0.1.10_linux_x86_64.tar.gz"
+      sha256 "be3e9b65176ac92126326f3a8be401aea08fe03a7a28fdbf286c77cb9a9986ef"
       def install
         bin.install "clim8"
         bash_completion.install "completions/_bash" => "clim8"
@@ -45,8 +45,8 @@ class Clim8 < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/clim8/releases/download/v0.1.9/clim8_0.1.9_linux_arm64.tar.gz"
-      sha256 "d5a91fe41c97a08f6295b40e007b9c4e939e7533ebbd7d0ff326d47d92c5d8a1"
+      url "https://github.com/blacktop/clim8/releases/download/v0.1.10/clim8_0.1.10_linux_arm64.tar.gz"
+      sha256 "090d19a7bff55b7bc0dd843ced609c852fc954daaa7c8333921fc24683d047bd"
       def install
         bin.install "clim8"
         bash_completion.install "completions/_bash" => "clim8"
@@ -57,11 +57,8 @@ class Clim8 < Formula
   end
 
   service do
-    run [opt_bin/"clim8", "temp"]
-    run_type :cron
-    cron "0 23 * * *"
+    run [opt_bin/"clim8", "daemon"]
     log_path var/"log/clim8.log"
-    error_log_path var/"log/clim8.err.log"
   end
 
   test do
