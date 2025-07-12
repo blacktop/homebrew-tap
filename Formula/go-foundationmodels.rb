@@ -5,13 +5,13 @@
 class GoFoundationmodels < Formula
   desc "Lightweight Go package for on-device AI text generation using macOS 26 Tahoe's Foundation Models framework."
   homepage "https://github.com/blacktop/go-foundationmodels"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/blacktop/go-foundationmodels/releases/download/v0.1.4/go-foundationmodels_0.1.4_macOS_arm64.tar.gz"
-    sha256 "4f4b438cdd08709ba2396cb40013ae6d72dbb8fbd45e9f3b7938fb6c4d9d60db"
+    url "https://github.com/blacktop/go-foundationmodels/releases/download/v0.1.5/go-foundationmodels_0.1.5_macOS_arm64.tar.gz"
+    sha256 "2f1ebf200ece4bae50d91a80a3aaf9b48d5c2ad03887dfd65f264a2c36be403d"
 
     def install
       bin.install "found"
