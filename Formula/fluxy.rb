@@ -5,21 +5,21 @@
 class Fluxy < Formula
   desc "FLUX image generator TUI"
   homepage "https://github.com/blacktop/fluxy"
-  version "0.1.8"
+  version "0.1.9"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/blacktop/fluxy/releases/download/v0.1.8/fluxy_0.1.8_macOS_x86_64.tar.gz"
-      sha256 "1582683527e5e005aea387103ee05f590b46044a45fac01eb2b083595be9ae17"
+    if Hardware::CPU.intel?
+      url "https://github.com/blacktop/fluxy/releases/download/v0.1.9/fluxy_0.1.9_macOS_x86_64.tar.gz"
+      sha256 "586acd4025df14e0997c9aa93b49c53e29923e9b4e653fbeb4bdcf285418b83f"
 
       def install
         bin.install "fluxy"
       end
     end
-    on_arm do
-      url "https://github.com/blacktop/fluxy/releases/download/v0.1.8/fluxy_0.1.8_macOS_arm64.tar.gz"
-      sha256 "4b8e0bf1a841570d124246d50c496e14ff509f7db8210f5357690a7ea205779d"
+    if Hardware::CPU.arm?
+      url "https://github.com/blacktop/fluxy/releases/download/v0.1.9/fluxy_0.1.9_macOS_arm64.tar.gz"
+      sha256 "8d8c8caf32fb3e05f4e3b253956a531567cf2029d23fb7fe7fffd5b57dd5c4ac"
 
       def install
         bin.install "fluxy"
@@ -28,24 +28,18 @@ class Fluxy < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/fluxy/releases/download/v0.1.8/fluxy_0.1.8_linux_x86_64.tar.gz"
-        sha256 "9c325bac62381d0304ab4c626e102124c520d757421b9bc23d5a1589c1cb4f1b"
-
-        def install
-          bin.install "fluxy"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/blacktop/fluxy/releases/download/v0.1.9/fluxy_0.1.9_linux_x86_64.tar.gz"
+      sha256 "6abc2faabf5bcc0e894771ba09b8ff22a372a75ccec151bdc2596e18c8e04697"
+      def install
+        bin.install "fluxy"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/fluxy/releases/download/v0.1.8/fluxy_0.1.8_linux_arm64.tar.gz"
-        sha256 "a3ac3a5fc772ce1cf94a2e77cf7616eab3b0dc5e1cc88c2a5b4d59658f93959f"
-
-        def install
-          bin.install "fluxy"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/blacktop/fluxy/releases/download/v0.1.9/fluxy_0.1.9_linux_arm64.tar.gz"
+      sha256 "ef87f3ef6f135b144aa5ca72d132015295c1f38dd2cca75b5ad2f75087b26d36"
+      def install
+        bin.install "fluxy"
       end
     end
   end
