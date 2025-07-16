@@ -5,13 +5,13 @@
 class McpTts < Formula
   desc "mcp-tts"
   homepage "https://github.com/blacktop/mcp-tts"
-  version "0.1.18"
+  version "0.1.19"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/blacktop/mcp-tts/releases/download/v0.1.18/mcp-tts_0.1.18_macOS_x86_64.tar.gz"
-    sha256 "f974d932714ca97c83c0c84810cb8f287719671ab79ad8f345d12b7a5ba6c3be"
+    url "https://github.com/blacktop/mcp-tts/releases/download/v0.1.19/mcp-tts_0.1.19_macOS_x86_64.tar.gz"
+    sha256 "f71b50c5ae0417f3ee2c7e0c63cdbbc2c583ec27588bfbe48c33d076ecd9015f"
 
     def install
       bin.install "mcp-tts"
@@ -21,8 +21,8 @@ class McpTts < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/blacktop/mcp-tts/releases/download/v0.1.18/mcp-tts_0.1.18_macOS_arm64.tar.gz"
-    sha256 "866a0c0a7956dc2ca473f6529274baa977e858990dc1e10460234bde6241d783"
+    url "https://github.com/blacktop/mcp-tts/releases/download/v0.1.19/mcp-tts_0.1.19_macOS_arm64.tar.gz"
+    sha256 "6639df83089648ec5aba1277edddf7a67f5bef045086393b4c00f289b3ce82ee"
 
     def install
       bin.install "mcp-tts"
