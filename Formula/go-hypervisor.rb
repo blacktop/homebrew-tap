@@ -5,13 +5,13 @@
 class GoHypervisor < Formula
   desc "Apple Hypervisor.framework Util"
   homepage "https://github.com/blacktop/hv"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/blacktop/go-hypervisor/releases/download/v1.0.2/go-hypervisor_1.0.2_macOS_arm64.tar.gz"
-    sha256 "8be9e6f3af530b721a24cd1e89ccbc1935a0ed32679fb8d709f5143a62030877"
+    url "https://github.com/blacktop/go-hypervisor/releases/download/v1.0.3/go-hypervisor_1.0.3_macOS_arm64.tar.gz"
+    sha256 "5878e13adddd349e7d75b5646d8aade1a864dfd964395cab8b00488b08b2d3dc"
 
     def install
       bin.install "hv"
