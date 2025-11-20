@@ -1,6 +1,6 @@
 cask "pdf" do
-  version "0.7.0"
-  sha256 "55854fa9cd28fb546907f8b55c165d48a1cab0abd74c6bf59bd58b0c660c6dc2"
+  version "0.7.1"
+  sha256 "214ed380115575ad3cd545d276614eb7fab45acf7791e5cdc9ac3291882e1888"
 
   url "https://github.com/blacktop/pdf/releases/download/v#{version}/pdf-#{version}-darwin-ARM64.tar.gz",
       verified: "github.com/blacktop/pdf/"
