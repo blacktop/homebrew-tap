@@ -16,4 +16,13 @@ cask "pdf" do
   depends_on arch: :arm64
 
   binary "pdf"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                  args:         [
+                    "-dr",
+                    "com.apple.quarantine",
+                    "#{staged_path}/pdf",
+                  ]
+  end
 end
