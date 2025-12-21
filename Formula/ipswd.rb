@@ -5,15 +5,15 @@
 class Ipswd < Formula
   desc "ipsw - Daemon"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.645"
+  version "3.1.646"
   license "MIT"
 
   depends_on "libusb" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.645/ipswd_3.1.645_macOS_x86_64.tar.gz"
-      sha256 "09b4bd57fe48a5db5b6d5d77bf579790b42c6c50e2b38c69c4871a77a06e23fc"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.646/ipswd_3.1.646_macOS_x86_64.tar.gz"
+      sha256 "99df50ba3772aa0b21b67bca000ed6c82d8c5ac17e5eca4c262b93f632f148e8"
 
       def install
         bin.install "ipswd"
@@ -26,8 +26,8 @@ class Ipswd < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.645/ipswd_3.1.645_macOS_arm64.tar.gz"
-      sha256 "8894c16816102f4962dc714a49424f27f8601887b68de7fe71f3104a3c732db4"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.646/ipswd_3.1.646_macOS_arm64.tar.gz"
+      sha256 "cb0db7ce6bdebee9db2202d1f05b8ee4aa6a4e6debba90a2e21fb63b16ae3917"
 
       def install
         bin.install "ipswd"
@@ -43,8 +43,8 @@ class Ipswd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.645/ipswd_3.1.645_linux_x86_64.tar.gz"
-      sha256 "cc85bc78e8d2e6535a8644f271de3986ac06169844c29dacd58d86002f108b9a"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.646/ipswd_3.1.646_linux_x86_64.tar.gz"
+      sha256 "b0cb13c5511bef119ad2db6d81d79c734acd99bf6324fe8a1d9680f0dc00d2ac"
       def install
         bin.install "ipswd"
         prefix.install "LICENSE", "README.md", "config.example.yml"
@@ -56,8 +56,8 @@ class Ipswd < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/ipsw/releases/download/v3.1.645/ipswd_3.1.645_linux_arm64.tar.gz"
-      sha256 "2e64a913567bdbbb8440176276700b85a5486a3be7222be59668d0bdc1794b46"
+      url "https://github.com/blacktop/ipsw/releases/download/v3.1.646/ipswd_3.1.646_linux_arm64.tar.gz"
+      sha256 "482db038e9318aa6bffbde5f036fb37c201e3243e11d87fe550e1b031d56a055"
       def install
         bin.install "ipswd"
         prefix.install "LICENSE", "README.md", "config.example.yml"
