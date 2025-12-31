@@ -5,13 +5,13 @@
 class Lifx < Formula
   desc "LIFX Light TUI and MCP Server"
   homepage "https://github.com/blacktop/lifx"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/lifx/releases/download/v0.1.0/lifx_0.1.0_macOS_x86_64.tar.gz"
-      sha256 "829f90680673a5e9a984e282a9346c41b07794998be2ebfb7bade922c625e547"
+      url "https://github.com/blacktop/lifx/releases/download/v0.1.1/lifx_0.1.1_macOS_x86_64.tar.gz"
+      sha256 "8e9fea5b8ddc5f9725f5ae57b833ee131889be0d76b1b97fde5bf49a6afcfa9a"
 
       def install
         bin.install "lifx"
@@ -21,8 +21,8 @@ class Lifx < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/lifx/releases/download/v0.1.0/lifx_0.1.0_macOS_arm64.tar.gz"
-      sha256 "7525398cd30e8539edf500f55e702160b0e4458bd855ed67497534686c399622"
+      url "https://github.com/blacktop/lifx/releases/download/v0.1.1/lifx_0.1.1_macOS_arm64.tar.gz"
+      sha256 "5d97423abf7c7b3cfc02498427c18ce8ba882295e855c7861f04425cbbe8f9c4"
 
       def install
         bin.install "lifx"
@@ -35,8 +35,8 @@ class Lifx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/lifx/releases/download/v0.1.0/lifx_0.1.0_linux_x86_64.tar.gz"
-      sha256 "4be4f6c640aee6144eada790eebbf06f2b6d2f9f5b7ab2f2b19c05daf5ccd7ff"
+      url "https://github.com/blacktop/lifx/releases/download/v0.1.1/lifx_0.1.1_linux_x86_64.tar.gz"
+      sha256 "1dd62ab0992159c0ab65bb5af55bc9a757ed5b99c8cca62e5ec59e4c6237e020"
       def install
         bin.install "lifx"
         bash_completion.install "completions/_bash" => "lifx"
@@ -45,8 +45,8 @@ class Lifx < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/lifx/releases/download/v0.1.0/lifx_0.1.0_linux_arm64.tar.gz"
-      sha256 "085e19bff76779fdcf4e717b2979e3587a90b32d65ab2a69edce8631e22e2bee"
+      url "https://github.com/blacktop/lifx/releases/download/v0.1.1/lifx_0.1.1_linux_arm64.tar.gz"
+      sha256 "4fdeff456eed7afecca4bd3b6a1f8f2e7f26370f3f74e98a8852768092740df0"
       def install
         bin.install "lifx"
         bash_completion.install "completions/_bash" => "lifx"
