@@ -1,6 +1,6 @@
 cask "dyld-tools" do
   version "26.1"
-  sha256 "13dd1d91eebc44c945388bad6e93cb017921d5e4ebe78c90acf0a2db123c4e8f"
+  sha256 "4e8028b8eb1421e1c7a2a9d666e9388e9f62d59eebc187c531247149a1197ca9"
 
   url "https://github.com/blacktop/darwin-dyld-build/releases/download/v26.1/dyld-tools-universal.tar.gz"
   name "dyld-tools"
