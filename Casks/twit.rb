@@ -3,7 +3,7 @@ cask "twit" do
   name "twit"
   desc "A beautiful TUI client for Twitter/X"
   homepage "https://github.com/blacktop/twit"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,7 +14,7 @@ cask "twit" do
   on_macos do
     on_arm do
       url "https://github.com/blacktop/twit/releases/download/v#{version}/twit_#{version}_Darwin_arm64.tar.gz"
-      sha256 "c4b40f02108a106b42db74933a3a734ff88e56dcb4c09d48938752d120e896ae"
+      sha256 "1f2db83fe09c3d9cb582a887326077756689b335e28d43a646f0ad6602afbde2"
     end
   end
 
