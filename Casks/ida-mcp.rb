@@ -1,7 +1,7 @@
 # This file is auto-generated. DO NOT EDIT.
 cask "ida-mcp" do
   version "0.9.2"
-  sha256 "98f5e7c15a2fe4b5ee1d8cec55a7507f2fc4207c875e8acb26574e9114ed9a39"
+  sha256 "0fcfa6f58342af1f095b3caf619418aaeb549178fc7e626a7e7da74055e00a03"
 
   url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version}/ida-mcp_#{version}_Darwin_arm64.tar.gz"
   name "ida-mcp"
