@@ -22,6 +22,12 @@ cask "ida-mcp@beta" do
     <<~EOS
       ida-mcp@beta requires IDA Pro 9.3+ to be installed.
       This is a prerelease version for testing.
+
+      Set IDADIR before running:
+        export IDADIR="/Applications/IDA Professional 9.3.app/Contents/MacOS"
+
+      For MCP integration with Claude Code:
+        claude mcp add ida -s user -e IDADIR='/Applications/IDA Professional 9.3.app/Contents/MacOS' -- ida-mcp
     EOS
   end
 end

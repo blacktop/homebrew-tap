@@ -21,6 +21,12 @@ cask "ida-mcp" do
   caveats do
     <<~EOS
       ida-mcp requires IDA Pro 9.2+ to be installed.
+
+      Set IDADIR before running:
+        export IDADIR="/Applications/IDA Professional 9.2.app/Contents/MacOS"
+
+      For MCP integration with Claude Code:
+        claude mcp add ida -s user -e IDADIR='/Applications/IDA Professional 9.2.app/Contents/MacOS' -- ida-mcp
     EOS
   end
 end
