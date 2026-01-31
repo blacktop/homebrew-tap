@@ -22,11 +22,11 @@ cask "ida-mcp" do
     <<~EOS
       ida-mcp requires IDA Pro 9.2+ to be installed.
 
-      Set IDADIR before running:
-        export IDADIR="/Applications/IDA Professional 9.2.app/Contents/MacOS"
+      Standard IDA installations work automatically:
+        claude mcp add ida -- ida-mcp
 
-      For MCP integration with Claude Code:
-        claude mcp add ida -s user -e IDADIR='/Applications/IDA Professional 9.2.app/Contents/MacOS' -- ida-mcp
+      If using a non-standard path, set DYLD_LIBRARY_PATH:
+        claude mcp add ida -e DYLD_LIBRARY_PATH='/path/to/ida/Contents/MacOS' -- ida-mcp
     EOS
   end
 end
