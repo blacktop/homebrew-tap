@@ -3,14 +3,14 @@ cask "ipsw" do
   name "ipsw"
   desc "iOS/macOS Research Swiss Army Knife"
   homepage "https://github.com/blacktop/ipsw"
-  version "3.1.649"
+  version "3.1.650"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "ipsw"
-  manpage "manpages/ipsw.1.gz"
+  manpage "manpages/*"
   bash_completion "completions/ipsw/_bash"
   zsh_completion "completions/ipsw/_zsh"
   fish_completion "completions/ipsw/_fish"
@@ -19,12 +19,12 @@ cask "ipsw" do
     on_intel do
       url "https://github.com/blacktop/ipsw/releases/download/v#{version}/ipsw_#{version}_macOS_x86_64_extras.tar.gz",
         verified: "github.com/blacktop/ipsw/releases/download"
-      sha256 "7593d9e024fc5de4af3cecee5cf140d04e707a71ba7ffe25f7c73ad6656167f4"
+      sha256 "d1ac8bfa91edde1af1595343ef9b642b7ec6cf34ab388ba233c4cb5d23cb5a29"
     end
     on_arm do
       url "https://github.com/blacktop/ipsw/releases/download/v#{version}/ipsw_#{version}_macOS_arm64_extras.tar.gz",
         verified: "github.com/blacktop/ipsw/releases/download"
-      sha256 "949250e92e2c7dfb35b18e7b1688e95a6f56902e0d1f1eff78e0ba7be5474363"
+      sha256 "8d54fff7435ceba6818e02827471d95b97f43aa874fd7cc13cfbf2fd7ece13e2"
     end
   end
 
