@@ -1,9 +1,9 @@
 # This file is auto-generated. DO NOT EDIT.
 cask "ida-mcp" do
-  version "0.9.3"
-  sha256 "c603c89c4068de75c97149614f10edf32543a945c8f91f6159a7bb49b89a03ea"
+  version "0.9.3,1"
+  sha256 "2631fcb0f213055f8e3777eac8275bd6b9bab2e9b49e68e4e7cfa5f27385b4bc"
 
-  url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version}/ida-mcp_#{version}_Darwin_arm64.tar.gz"
+  url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version.before_comma}/ida-mcp_#{version.before_comma}_Darwin_arm64.tar.gz"
   name "ida-mcp"
   desc "Headless IDA Pro MCP Server for AI-powered binary analysis"
   homepage "https://github.com/blacktop/ida-mcp-rs"
