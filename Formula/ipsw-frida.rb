@@ -14,7 +14,7 @@ class IpswFrida < Formula
 
   if Hardware::CPU.intel?
     url "https://github.com/blacktop/ipsw/releases/download/v3.1.652/ipsw_3.1.652_macOS_x86_64_frida.tar.gz"
-    sha256 "73687c477e7e5000e6724b8cb2d7ea3c8181d0766183b11046d160417d10af00"
+    sha256 "d388313aa8a02e421c9caec1738541713e41a52b0c524a108a76ed4b8aecf581"
 
     def install
       bin.install "ipsw"
@@ -29,7 +29,7 @@ class IpswFrida < Formula
   end
   if Hardware::CPU.arm?
     url "https://github.com/blacktop/ipsw/releases/download/v3.1.652/ipsw_3.1.652_macOS_arm64_frida.tar.gz"
-    sha256 "442bc204ebfba00662b802ee013225b653e5fd604e068186fb1dfc0b34bd0e5d"
+    sha256 "680df0e7a0238d8a2b247f738ecf0a46ca1e6ef886a1389b017da9f1d38b8a9b"
 
     def install
       bin.install "ipsw"
