@@ -13,7 +13,7 @@ class Ipswd < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/blacktop/ipsw/releases/download/v3.1.654/ipswd_3.1.654_macOS_x86_64.tar.gz"
-      sha256 "94800fe130e00cb131e56e32f2ba961de04e452e35330ddb5dc790fb69162b01"
+      sha256 "0de96fd87237771d576171d31dcc45813c460d3c393fe9e3d880d7a9da786842"
 
       def install
         bin.install "ipswd"
@@ -27,7 +27,7 @@ class Ipswd < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/blacktop/ipsw/releases/download/v3.1.654/ipswd_3.1.654_macOS_arm64.tar.gz"
-      sha256 "1a7e5111214d681216e93580b08f81fb2429e61cd762c9f7c209061f52131f8a"
+      sha256 "f0dc2e38d0e021585529f3ffbd717425ac6ccc97b73277e8a6075b26e7293783"
 
       def install
         bin.install "ipswd"
@@ -44,7 +44,7 @@ class Ipswd < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/blacktop/ipsw/releases/download/v3.1.654/ipswd_3.1.654_linux_x86_64.tar.gz"
-      sha256 "21d446d6fe1801bf494b6445fb9ee61c25f04851a55c08412c36af69f51970c6"
+      sha256 "192dfc5db6f7b0631103575402c5ad977b10d4ba6d3de5c8f37ef4c690b30344"
       def install
         bin.install "ipswd"
         prefix.install "LICENSE", "README.md", "config.example.yml"
@@ -57,7 +57,7 @@ class Ipswd < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/blacktop/ipsw/releases/download/v3.1.654/ipswd_3.1.654_linux_arm64.tar.gz"
-      sha256 "d3e8af2d427b5de0f69245fddb712571ca89356a9c772774494aa695664cb706"
+      sha256 "3e5cb02e855ab85b5f0d1db377c755d5b7ab3a41159bcde4fc349d9a194804ad"
       def install
         bin.install "ipswd"
         prefix.install "LICENSE", "README.md", "config.example.yml"
