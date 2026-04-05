@@ -1,9 +1,14 @@
 # This file is auto-generated. DO NOT EDIT.
 cask "ida-mcp" do
-  version "9.3.1"
-  sha256 "a48a95b00e0bd7f21422a41e23674dc885a1749c14d20ee173df7b9aeec9a0cc"
+  arch arm: "arm64", intel: "x86_64"
+  os macos: "Darwin", linux: "Linux"
 
-  url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version}/ida-mcp_#{version}_Darwin_arm64.tar.gz"
+  version "9.3.3"
+  sha256 arm:          "c2bfc93343fef75acac7f33d80cc380ccac221253b671a9a9a991232e173ca1d",
+         intel:        "efcd9c5270f5386b224253f85c8690af354899efea6170be4db3ae48b6bd364c",
+         x86_64_linux: "7328360fb81bc35f549c65cd5935c3c7c2f52f9f116c0ea3bfeaa1e803401f70"
+
+  url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version}/ida-mcp_#{version}_#{os}_#{arch}.tar.gz"
   name "ida-mcp"
   desc "Headless IDA Pro MCP Server for AI-powered binary analysis (IDA 9.3)"
   homepage "https://github.com/blacktop/ida-mcp-rs"
@@ -12,9 +17,11 @@ cask "ida-mcp" do
 
   binary "ida-mcp"
 
-  postflight do
-    Dir.glob("#{staged_path}/**/ida-mcp").each do |f|
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", f]
+  on_macos do
+    postflight do
+      Dir.glob("#{staged_path}/**/ida-mcp").each do |f|
+        system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", f]
+      end
     end
   end
 
@@ -26,8 +33,9 @@ cask "ida-mcp" do
       Standard IDA installations work automatically:
         claude mcp add ida -- ida-mcp
 
-      If using a non-standard path, set DYLD_LIBRARY_PATH:
-        claude mcp add ida -e DYLD_LIBRARY_PATH='/path/to/ida/Contents/MacOS' -- ida-mcp
+      If using a non-standard path:
+        macOS: set DYLD_LIBRARY_PATH to your IDA path
+        Linux: set IDADIR or LD_LIBRARY_PATH to your IDA path
     EOS
   end
 end
