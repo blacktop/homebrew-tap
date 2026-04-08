@@ -1,15 +1,15 @@
 class Disctui < Formula
   desc "A fast, minimal Discord TUI with AI-powered conversation summaries"
   homepage "https://github.com/blacktop/disctui"
-  version "0.1.4"
+  version "0.1.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/disctui/releases/download/v0.1.4/disctui-aarch64-apple-darwin.tar.xz"
-      sha256 "5a3b9231378b95a13275bf46ad2750f0ee134c97b5fc6004f085a81d50c86f5a"
+      url "https://github.com/blacktop/disctui/releases/download/v0.1.5/disctui-aarch64-apple-darwin.tar.xz"
+      sha256 "c7459bb7ded7ee2e8eac6dfce9f2ee20656e939b5e8d1f89344c60d5fefeda98"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/disctui/releases/download/v0.1.4/disctui-x86_64-apple-darwin.tar.xz"
-      sha256 "1440278686948fbaa73f1af147260379dbceb1a75d5bf666ef1ac027260a2ef2"
+      url "https://github.com/blacktop/disctui/releases/download/v0.1.5/disctui-x86_64-apple-darwin.tar.xz"
+      sha256 "7fbc72d0ed9bbfa5120652148256ab65683000578554e769d80dab18b30b794e"
     end
   end
   license "MIT"
