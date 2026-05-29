@@ -3,11 +3,11 @@ cask "ida-mcp" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "Darwin", linux: "Linux"
 
-  version "9.3.23"
-  sha256 arm:          "3fee4893995d830227423ad8e2425178eda66af4a8c4b9f364ac7248b8ebbf95",
-         intel:        "710b39ffc6e7862c35fce67135d81f9aa08a43be0ea3dcd6781b229cb1ef9a28",
-         arm64_linux:  "8d7a70bb4468955f2d4668b202ea5a4fec4f54eca689ae6fb70c6f5cf7de707d",
-         x86_64_linux: "b66e43a96d937cd47ab74545ae101849de13c923786f2f0f3ceda6099c166bc3"
+  version "9.3.24"
+  sha256 arm:          "3cd3640a4984e17502c3dc0de03c2dc50658e35a2df16612054224254096ce04",
+         intel:        "b5fa51795722c59b06dd7d3ea0ece0b6e28638a37ffba7745eb462120db0efbd",
+         arm64_linux:  "55a2b523cb028559edaa47e984ba43a290af4b5de7b76c928318e2415b1f88bc",
+         x86_64_linux: "2ecf5968f593140f36c1a3ad9dd17894dfd90c2f4fd4f7c4189c4c9215ea3624"
 
   url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version}/ida-mcp_#{version}_#{os}_#{arch}.tar.gz"
   name "ida-mcp"
