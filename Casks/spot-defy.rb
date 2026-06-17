@@ -3,9 +3,9 @@ cask "spot-defy" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "Darwin"
 
-  version "0.1.3"
-  sha256 arm:   "5888720681765cc4515e7d48a6ad47fc2a22704fc578b439a68d7c571807c446",
-         intel: "4e27570ca46827b593b92d025ddef934cf8cce2abe6b1239e052fd661559f5e6"
+  version "0.1.4"
+  sha256 arm:   "6c847c7a9328bcaad929c0e9ee51380ee823bc344364e1979d45a4a26e5b3cfc",
+         intel: "7a93fd160a298ea5865ba257958e7ce5819883f0a751ba1675781b9e696eb98d"
 
   url "https://github.com/blacktop/spot-defy/releases/download/v#{version}/spot-defy_#{version}_#{os}_#{arch}.tar.gz"
   name "spot-defy"
