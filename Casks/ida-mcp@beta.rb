@@ -1,7 +1,7 @@
 # This file is auto-generated. DO NOT EDIT.
 cask "ida-mcp@beta" do
-  version "0.9.3-beta.3"
-  sha256 "2b22e2277ac04fc41e42e8d17e7ef0b26bcd768ea54e09068b2649ffc4e4b5c8"
+  version "9.4.0-beta.1"
+  sha256 "5d3bbade5d898b93f6f781df9f3616c937ec43d9bfc41dbcb35ad1f42a6dfbbe"
 
   url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version}/ida-mcp_#{version}_Darwin_arm64.tar.gz"
   name "ida-mcp (beta)"
@@ -20,7 +20,7 @@ cask "ida-mcp@beta" do
 
   caveats do
     <<~EOS
-      ida-mcp@beta requires IDA Pro 9.3+ to be installed.
+      ida-mcp@beta requires IDA Pro 9.4+ to be installed.
       This is a prerelease version for testing.
 
       Standard IDA installations work automatically:
