@@ -3,6 +3,8 @@ cask "ida-mcp@9.3" do
   version "9.3.26"
   sha256 "383797fd9c56dcb5f9d7625e32a0771acd52f0cc8f5b3b96d2784dabdd67c8a0"
 
+  depends_on arch: :arm64
+
   url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version}/ida-mcp_#{version}_Darwin_arm64.tar.gz"
   name "ida-mcp (IDA 9.3)"
   desc "Headless IDA Pro MCP Server for AI-powered binary analysis (IDA 9.3)"
