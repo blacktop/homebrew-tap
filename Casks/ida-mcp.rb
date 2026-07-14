@@ -3,15 +3,15 @@ cask "ida-mcp" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "Darwin", linux: "Linux"
 
-  version "9.3.26"
-  sha256 arm:          "383797fd9c56dcb5f9d7625e32a0771acd52f0cc8f5b3b96d2784dabdd67c8a0",
-         intel:        "47fb6a0923ec6da06a42ba8dd19bfa6db44bd89837d0b56f8ca39d3f5f3ada06",
-         arm64_linux:  "5ee894a2cd703d1eb172654412e8cbfd8bdfd201dbd4c87b1ee68681ea422ee1",
-         x86_64_linux: "263c906099af398ceaf58a475d7574a17da0ef385390d463c9b3c6c36d782400"
+  version "9.4.0"
+  sha256 arm:          "e4592eb81aaa75ac2a57ee6f804cf977023b1433fd35dc498490a331cc908904",
+         intel:        "974f2ba5887ca8a982a1d3fa128f654e2e17c33587e37db8d837fb775426cbaa",
+         arm64_linux:  "e8dd0037c679e2b9e9ef8a11d657b8da766a6d7c431f6517c2578d6a3cb064df",
+         x86_64_linux: "24de3c7bdc2c89bda30e64f0462da8057971d307527ccc80aa167a74774443a1"
 
   url "https://github.com/blacktop/ida-mcp-rs/releases/download/v#{version}/ida-mcp_#{version}_#{os}_#{arch}.tar.gz"
   name "ida-mcp"
-  desc "Headless IDA Pro MCP Server for AI-powered binary analysis (IDA 9.3)"
+  desc "Headless IDA Pro MCP Server for AI-powered binary analysis (IDA 9.4)"
   homepage "https://github.com/blacktop/ida-mcp-rs"
 
   conflicts_with cask: "ida-mcp@beta"
@@ -28,7 +28,7 @@ cask "ida-mcp" do
 
   caveats do
     <<~EOS
-      ida-mcp requires IDA Pro 9.3 to be installed.
+      ida-mcp requires IDA Pro 9.4 to be installed.
       For other IDA versions: brew install blacktop/tap/ida-mcp@<version>
 
       Standard IDA installations work automatically:
