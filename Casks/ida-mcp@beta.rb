@@ -14,10 +14,8 @@ cask "ida-mcp@beta" do
 
   binary "ida-mcp"
 
-  postflight do
-    Dir.glob("#{staged_path}/**/ida-mcp").each do |f|
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", f]
-    end
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/ida-mcp"]
   end
 
   caveats do

@@ -15,10 +15,9 @@ cask "spot-defy" do
   binary "spot-defy"
 
   on_macos do
-    postflight do
-      Dir.glob("#{staged_path}/**/spot-defy").each do |f|
-        system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", f]
-      end
+    postflight_steps do
+      run "/usr/bin/xattr",
+          args: ["-dr", "com.apple.quarantine", "{{staged_path}}/spot-defy"]
     end
   end
 

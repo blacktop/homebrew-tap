@@ -10,10 +10,10 @@ cask "dyld-tools" do
   binary "dyld_info"
   binary "dyld_shared_cache_util"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{staged_path}/dyld_info"]
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{staged_path}/dyld_shared_cache_util"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{staged_path}}/dyld_info"]
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{staged_path}}/dyld_shared_cache_util"]
   end
 end

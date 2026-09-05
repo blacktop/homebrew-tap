@@ -5,13 +5,11 @@ cask "ipsw" do
   on_macos do
     on_arm do
       sha256 "a38075f112cf6bfa60daeecd403564a59675547b5fba9e13d8d4f4ba71baaf33"
-      url "https://github.com/blacktop/ipsw/releases/download/v#{version}/ipsw_#{version}_macOS_arm64_extras.tar.gz",
-        verified: "github.com/blacktop/ipsw/releases/download"
+      url "https://github.com/blacktop/ipsw/releases/download/v#{version}/ipsw_#{version}_macOS_arm64_extras.tar.gz"
     end
     on_intel do
       sha256 "24860b5e8bfdb83c8aff104fedb2c2f83bdf728b49d6bc1644e47f7f3332c79c"
-      url "https://github.com/blacktop/ipsw/releases/download/v#{version}/ipsw_#{version}_macOS_x86_64_extras.tar.gz",
-        verified: "github.com/blacktop/ipsw/releases/download"
+      url "https://github.com/blacktop/ipsw/releases/download/v#{version}/ipsw_#{version}_macOS_x86_64_extras.tar.gz"
     end
   end
 

@@ -29,11 +29,9 @@ cask "twit" do
     end
   end
 
-  postflight do
-    if OS.mac?
-      Dir.glob("#{staged_path}/**/twit").each do |f|
-        system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", f]
-      end
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/twit"]
     end
   end
 
