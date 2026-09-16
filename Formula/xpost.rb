@@ -5,15 +5,15 @@
 class Xpost < Formula
   desc "Cross post to all socials at once from your terminal"
   homepage "https://github.com/blacktop/xpost"
-  version "1.0.5"
+  version "1.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blacktop/xpost/releases/download/v1.0.5/xpost_1.0.5_macOS_x86_64.tar.gz"
-      sha256 "db4cf3493093391e379cb9f6f9369055996b8a34b236bb459fbf084618be1dfd"
+      url "https://github.com/blacktop/xpost/releases/download/v1.0.6/xpost_1.0.6_macOS_x86_64.tar.gz"
+      sha256 "ff0b6671c6ecfb8b3ca03b22853335b7c0e0637025394613f910c4cd090d0b01"
 
-      def install
+      define_method(:install) do
         bin.install "xpost"
         bash_completion.install "completions/_bash" => "xpost"
         zsh_completion.install "completions/_zsh" => "_xport"
@@ -21,10 +21,10 @@ class Xpost < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blacktop/xpost/releases/download/v1.0.5/xpost_1.0.5_macOS_arm64.tar.gz"
-      sha256 "1d18972c73b99b3aec1f0b9b0bb706752d587f9b4ba83a773c6c5c50fb711d22"
+      url "https://github.com/blacktop/xpost/releases/download/v1.0.6/xpost_1.0.6_macOS_arm64.tar.gz"
+      sha256 "9009a614b4ec7a6e22b3bce6053cd6aa7c6de8146e1d9d4e452b06d202facb24"
 
-      def install
+      define_method(:install) do
         bin.install "xpost"
         bash_completion.install "completions/_bash" => "xpost"
         zsh_completion.install "completions/_zsh" => "_xport"
@@ -35,9 +35,9 @@ class Xpost < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/xpost/releases/download/v1.0.5/xpost_1.0.5_linux_x86_64.tar.gz"
-      sha256 "8a0f772767a037963bfbf2fe6c7adfaa411dd88a65aa791192e6c750149dffdf"
-      def install
+      url "https://github.com/blacktop/xpost/releases/download/v1.0.6/xpost_1.0.6_linux_x86_64.tar.gz"
+      sha256 "9d7698defc0c5df2c146e55d6a6aa564850186137491afc0b0267cda1021f59f"
+      define_method(:install) do
         bin.install "xpost"
         bash_completion.install "completions/_bash" => "xpost"
         zsh_completion.install "completions/_zsh" => "_xport"
@@ -45,9 +45,9 @@ class Xpost < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blacktop/xpost/releases/download/v1.0.5/xpost_1.0.5_linux_arm64.tar.gz"
-      sha256 "9b546ea9649d243b84f5c4ea740212812e5b1dfc47c65d3c442c06371c5013da"
-      def install
+      url "https://github.com/blacktop/xpost/releases/download/v1.0.6/xpost_1.0.6_linux_arm64.tar.gz"
+      sha256 "458f3a80936cb7edf3dc54722a80e5af32dd70aaaa463f911747f0597090f918"
+      define_method(:install) do
         bin.install "xpost"
         bash_completion.install "completions/_bash" => "xpost"
         zsh_completion.install "completions/_zsh" => "_xport"
