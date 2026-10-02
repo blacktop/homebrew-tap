@@ -1,7 +1,7 @@
 # This file is auto-generated. DO NOT EDIT.
 cask "ida-mcp@beta" do
-  version "9.4.0-beta.2"
-  sha256 "a56387dd125c41cbf5e17a5e2ab4405f0cf26547520848406d6968952fa0ec87"
+  version "9.5.0-beta.1"
+  sha256 "0ccca56c83023c9334a696ef79f4825b0b2a8735fa30ed90605b26735c534184"
 
   depends_on arch: :arm64
 
@@ -15,12 +15,13 @@ cask "ida-mcp@beta" do
   binary "ida-mcp"
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/ida-mcp"]
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{staged_path}}/ida-mcp"]
   end
 
   caveats do
     <<~EOS
-      ida-mcp@beta requires IDA Pro 9.4+ to be installed.
+      ida-mcp@beta requires IDA Pro 9.5+ to be installed.
       This is a prerelease version for testing.
 
       Standard IDA installations work automatically:
