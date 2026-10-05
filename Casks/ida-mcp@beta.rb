@@ -1,7 +1,7 @@
 # This file is auto-generated. DO NOT EDIT.
 cask "ida-mcp@beta" do
-  version "9.5.0-beta.3"
-  sha256 "4dd43f351ee48cbee907d633fe79f2fb3f5a09c532aacb672da53e128132dd73"
+  version "9.5.0-beta.4"
+  sha256 "b1525f79a46e469490017dba31b43970bafb84744df9c13466bfd997cced6b67"
 
   depends_on arch: :arm64
 
