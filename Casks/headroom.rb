@@ -6,15 +6,15 @@ cask "headroom" do
     end
   end
 
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     on_arm do
-      sha256 "dcf056fd39699c902816466bef4f5b166b59131ca572bc3e574294d3a8ec3a48"
+      sha256 "646f3ec012c2fcd1cd2991185af1a1677044fcb90dae26e668929823a9ee51b8"
       url "https://github.com/blacktop/headroom/releases/download/v#{version}/headroom_#{version}_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "464ade4cdb8a9fd52bc63b8142447311e772e23dc7bf8cd7bb0eb1728207c602"
+      sha256 "38266893dddd7e95d0a45a44edc086c88135d44be79f308e3e2f21b7678850de"
       url "https://github.com/blacktop/headroom/releases/download/v#{version}/headroom_#{version}_Darwin_x86_64.tar.gz"
     end
   end
