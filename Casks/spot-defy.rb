@@ -12,6 +12,8 @@ cask "spot-defy" do
   desc "Privacy-first Spotify player TUI with embedded streaming"
   homepage "https://github.com/blacktop/spot-defy"
 
+  depends_on :macos
+
   binary "spot-defy"
 
   on_macos do
