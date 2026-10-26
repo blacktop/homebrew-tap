@@ -7,15 +7,15 @@ cask "rexurrect" do
     end
   end
 
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     on_arm do
-      sha256 "dea4e98d26688ac9568939803bd0759ab09df989aa297201ab1aca82015cabac"
+      sha256 "0032cda506a38c38492b86913aa2819bb36993386da21657bcbf2720c092ca1a"
       url "https://github.com/blacktop/rexurrect/releases/download/v#{version}/rexurrect_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "05555f9c110f071d267f97218923d5f675faf8fb57d91de2690c7d66c03e7eb8"
+      sha256 "ac9c5d52ca11720b06696b6ccc20bdcdc074e917d6941c6bbb6df4bcec319354"
       url "https://github.com/blacktop/rexurrect/releases/download/v#{version}/rexurrect_#{version}_darwin_amd64.tar.gz"
     end
   end
@@ -33,7 +33,10 @@ cask "rexurrect" do
   # No zap stanza required
 
   caveats <<~EOS
-    To build and install the per-user LaunchAgent, run `just install`
-    from a checkout of https://github.com/blacktop/rexurrect.
+    Install the per-user LaunchAgent (add --scrollback to replay pane output):
+      rexurrect agent install --server "unix://$HOME/Library/Application Support/rex/server.sock" --state-dir "$HOME/Library/Application Support/rexurrect"
+    To bring back the command a pane was running, add to your shell config:
+      eval "$(rexurrect hook zsh)"        # ~/.zshrc
+      rexurrect hook fish | source       # ~/.config/fish/config.fish
   EOS
 end
