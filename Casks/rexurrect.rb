@@ -7,15 +7,15 @@ cask "rexurrect" do
     end
   end
 
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     on_arm do
-      sha256 "0032cda506a38c38492b86913aa2819bb36993386da21657bcbf2720c092ca1a"
+      sha256 "8bec06021430ba252454a42c68502a896da8189f84f9e0f2e559978234b98760"
       url "https://github.com/blacktop/rexurrect/releases/download/v#{version}/rexurrect_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "ac9c5d52ca11720b06696b6ccc20bdcdc074e917d6941c6bbb6df4bcec319354"
+      sha256 "d1e204bc423177669f0c6176bcd28f8ce3ce767541091f2019ea4efd0ae07ac2"
       url "https://github.com/blacktop/rexurrect/releases/download/v#{version}/rexurrect_#{version}_darwin_amd64.tar.gz"
     end
   end
