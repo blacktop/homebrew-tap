@@ -5,13 +5,13 @@
 class Apfs < Formula
   desc "APFS parser written in pure Go"
   homepage "https://github.com/blacktop/go-apfs"
-  version "1.0.27"
+  version "1.0.29"
 
   on_macos do
-    url "https://github.com/blacktop/go-apfs/releases/download/v1.0.27/go-apfs_1.0.27_macOS_universal.tar.gz"
-    sha256 "f760650dcd05ecd31254499627a7b75a3807dfdc8f454227cc2af714959adc23"
+    url "https://github.com/blacktop/go-apfs/releases/download/v1.0.29/go-apfs_1.0.29_macOS_universal.tar.gz"
+    sha256 "75ae014b3dc7760f02ee3e7c309ab5b8f258a2ec8baad07d67160af2c1a8f831"
 
-    def install
+    define_method(:install) do
       bin.install "apfs"
       bash_completion.install "completions/_bash" => "apfs"
       zsh_completion.install "completions/_zsh" => "_apfs"
@@ -20,30 +20,24 @@ class Apfs < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/go-apfs/releases/download/v1.0.27/go-apfs_1.0.27_linux_x86_64.tar.gz"
-        sha256 "45cb153a19d253d9ce944ff83c447171e4335960c75b6749b877912570b1fb42"
-
-        def install
-          bin.install "apfs"
-          bash_completion.install "completions/_bash" => "apfs"
-          zsh_completion.install "completions/_zsh" => "_apfs"
-          fish_completion.install "completions/_fish" => "apfs.fish"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/blacktop/go-apfs/releases/download/v1.0.29/go-apfs_1.0.29_linux_x86_64.tar.gz"
+      sha256 "1197a4268d91ca2d4e6bf3cad5e9e16aa5bc9f3aa28c31aea5b1503a8d7ce8f3"
+      define_method(:install) do
+        bin.install "apfs"
+        bash_completion.install "completions/_bash" => "apfs"
+        zsh_completion.install "completions/_zsh" => "_apfs"
+        fish_completion.install "completions/_fish" => "apfs.fish"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/blacktop/go-apfs/releases/download/v1.0.27/go-apfs_1.0.27_linux_arm64.tar.gz"
-        sha256 "cb13564a6c0db272e94696b69969bceb2301f7bdd4e9bef4d2626448608550cd"
-
-        def install
-          bin.install "apfs"
-          bash_completion.install "completions/_bash" => "apfs"
-          zsh_completion.install "completions/_zsh" => "_apfs"
-          fish_completion.install "completions/_fish" => "apfs.fish"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/blacktop/go-apfs/releases/download/v1.0.29/go-apfs_1.0.29_linux_arm64.tar.gz"
+      sha256 "491efbdc47fa90d037c649e15733d609dfc9ad907409f482a990f8178699d685"
+      define_method(:install) do
+        bin.install "apfs"
+        bash_completion.install "completions/_bash" => "apfs"
+        zsh_completion.install "completions/_zsh" => "_apfs"
+        fish_completion.install "completions/_fish" => "apfs.fish"
       end
     end
   end
