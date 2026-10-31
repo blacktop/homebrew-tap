@@ -2,15 +2,15 @@
 cask "ipsw" do
   depends_on :macos
 
-  version "3.1.739"
+  version "3.1.740"
 
   on_macos do
     on_arm do
-      sha256 "588b315855cfbb1ae83597a469d1c422e25752bf825867ab6a7e600b71fac5c8"
+      sha256 "04a042fe5c1a467aca8b42fe9a9f530f2ca06cf8532c82552d55236710897ac8"
       url "https://github.com/blacktop/ipsw/releases/download/v#{version}/ipsw_#{version}_macOS_arm64_extras.tar.gz"
     end
     on_intel do
-      sha256 "368eef3d986bbd287b632c72e7cd058ccb447ea7a5d11dd58bb798ce068b81c8"
+      sha256 "b27790fd4a629eb3ca5e105ae64d2f00e45e8141fd2a21754a5f631caaaa9b55"
       url "https://github.com/blacktop/ipsw/releases/download/v#{version}/ipsw_#{version}_macOS_x86_64_extras.tar.gz"
     end
   end
@@ -25,6 +25,8 @@ cask "ipsw" do
   conflicts_with cask: [
       "ipsw-frida",
     ]
+
+  depends_on :macos
 
   binary "ipsw"
   manpage "manpages/ipsw-appstore-bundle-cap.1.gz"
@@ -262,8 +264,8 @@ cask "ipsw" do
   manpage "manpages/ipsw-watch.1.gz"
   manpage "manpages/ipsw.1.gz"
   bash_completion "completions/ipsw/_bash"
-  fish_completion "completions/ipsw/_fish"
   zsh_completion "completions/ipsw/_zsh"
+  fish_completion "completions/ipsw/_fish"
 
   # No zap stanza required
 end
