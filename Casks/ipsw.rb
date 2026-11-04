@@ -26,8 +26,6 @@ cask "ipsw" do
       "ipsw-frida",
     ]
 
-  depends_on :macos
-
   binary "ipsw"
   manpage "manpages/ipsw-appstore-bundle-cap.1.gz"
   manpage "manpages/ipsw-appstore-bundle-ls.1.gz"
