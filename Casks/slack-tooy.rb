@@ -8,15 +8,15 @@ cask "slack-tooy" do
     end
   end
 
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_arm do
-      sha256 "7c1a62845a42c5fe1ee1a3a669482e45a5a56e290e7ee4391f1e58769d7b1784"
+      sha256 "a8b1264610342546e7c85f52f0f9d98d97e2a5033d4f611397ea2f7e6418017a"
       url "https://github.com/blacktop/slack-tooy/releases/download/v#{version}/slack-tooy_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "39c8d65defcfba8d7d23ff305e89fcd0b324071fdb873accd2b69281ae04d92b"
+      sha256 "acb80456cbfc3ba79a486bfccfe44235c7225e17fa54270612348e6bad47cfc6"
       url "https://github.com/blacktop/slack-tooy/releases/download/v#{version}/slack-tooy_#{version}_darwin_amd64.tar.gz"
     end
   end
